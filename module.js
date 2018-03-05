@@ -1,5 +1,5 @@
 (function(){
 angular
-.module("myApp", ['jkAngularRatingStars']);
+.module("myApp", ['angular-input-stars']);
 
 })();
