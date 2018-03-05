@@ -1,5 +1,5 @@
 (function(){
 angular
-.module("myApp", ['angular-input-stars']);
+	.module("myApp", ["ngMaterial","angular-input-stars"]);
 
 })();

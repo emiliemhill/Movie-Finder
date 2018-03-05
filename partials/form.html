@@ -1,14 +1,37 @@
 <div>
   <form ng-submit="$ctrl.keysearch($ctrl.form)">
 
-	<p>Keyword:</p>
-	<input type="text" ng-model="$ctrl.form.keyword"/>
+	<h3>Genre:</h3>
+	<div class="md-padding" ng-cloak>
+	  <div>
+	    <h1 class="md-title">Choose a genre (or two)</h1>
+	    <div layout="row">
+	      <md-input-container>
+	        <label>Genres</label>
+	        <md-select ng-model="$ctrl.form.genre"
+	                   md-on-close="clearSearchTerm()"
+	                   data-md-container-class="selectdemoSelectHeader"
+	                   multiple>
+	          <md-select-header class="demo-select-header">
+	            <input ng-model="searchTerm"
+	                   type="search"
+	                   placeholder="Search for a genre.."
+	                   class="demo-header-searchbox md-text">
+	          </md-select-header>
+	          <md-optgroup label="Genres">
+	            <md-option ng-value="genre" ng-repeat="genre in $ctrl.genres |
+	              filter:searchTerm">{{$ctrl.genre}}</md-option>
+	          </md-optgroup>
+	        </md-select>
+	      </md-input-container>
+	    </div>
+	 </div>
+	</div>
 
-   	<div>
+	   	<div>
 	    <h3>Rating</h3> 
-	    <input-stars ng-model="prop1" on-star-click="clickHandler(prop1)" max="5"></input-stars>
-	    <!-- <div style="width: 100px">{{$ctrl.firstRate}} Stars</div> -->
-  	 </div>
+	    <input-stars ng-model="$ctrl.form.rating" on-star-click="clickHandler(rating)" max="10"></input-stars>
+	</div>
 
 </form>
 
