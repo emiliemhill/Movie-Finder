@@ -1,0 +1,15 @@
+<div>
+  <form ng-submit="$ctrl.keysearch($ctrl.form)">
+
+<p>Keyword:</p>
+<input type="text" ng-model="$ctrl.form.keyword"/>
+
+   <div>
+     <h3>Rating</h3>
+     <jk-rating-stars rating="$ctrl.firstRate" ng-model="$ctrl.rating"  ></jk-rating-stars>
+     <div style="width: 100px">{{$ctrl.firstRate}} Stars</div>
+   </div>
+
+</form>
+
+</div>
