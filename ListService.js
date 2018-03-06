@@ -13,7 +13,7 @@
     }
 
     function saveToList(movie) {
-      laterList.push(movie); 
+      laterList.push(movie);
     }
 
     function displayList() {
