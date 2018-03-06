@@ -1,7 +1,7 @@
 (function() {
 	var formComponent = {
     	templateUrl: `partials/form.html`,
-    	controller: function($element) {
+    	controller: function($element, MovieService) {
       		var $ctrl = this;
       		//this method gathers the form object onto the model//
       		$ctrl.keysearch = function (form) {
@@ -16,12 +16,13 @@
 		  	$element.find('input').on('keydown', function(ev) {
 		        ev.stopPropagation();
         	//stopPropagation allows the search field to be used...The default event for md-select cancels keydown events//
-		      
+
 		      })
-    
+
+
         	}
      	}
-    
+
 
 
   angular
