@@ -1,8 +1,9 @@
 (function() {
   var listComponent = {
     templateUrl: `partials/list.html`,
-    controller: function() {
-
+    controller: function(ListService) {
+      var $ctrl = this;
+      $ctrl.movies = ListService.displayList();
     }
   }
 
