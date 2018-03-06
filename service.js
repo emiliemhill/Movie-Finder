@@ -1,8 +1,10 @@
 (function () {
   function MovieService($http) {
+    var movieList;
 
     return {
-      getMovies: getMovies
+      getMovies: getMovies,
+      setMovies: setMovies
     }
 
     function getMovies(genres, minLength, maxLength, minRating, maxRating) {
@@ -48,9 +50,14 @@
         url: baseUrl
       }).then(function (response) {
         console.log("service", response.data.results);
-        return response.data.results;
+        movieList = response.data.results;
       });
     }
+
+    function setMovies() {
+      return movieList;
+    }
+
   }
 
   angular
