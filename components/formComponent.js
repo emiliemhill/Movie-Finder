@@ -1,7 +1,7 @@
 (function() {
 	var formComponent = {
     templateUrl: `partials/form.html`,
-    controller: function($element) {
+    controller: function($element, MovieService) {
       var $ctrl = this;
       //this method gathers the form object onto the model//
       $ctrl.keysearch = function(form) {
@@ -29,16 +29,26 @@
           maxRange: 180
         }
       }
+        $ctrl.getMovies = function(form) {
+          console.log("get movies");
+          console.log(form);
+          MovieService.getMovies(form);
+          // MovieService.getMovies(genres, minLength, maxLength, minRating, maxRating)
+        };
+        // $ctrl.getMovies();
+        // $ctrl.getMovies(["18"], undefined, undefined, undefined, undefined);
+
         $element.find('input').on('keydown', function(ev) {
 		        ev.stopPropagation();
 		  			//stopPropagation allows the search field to be used...The default event for md-select cancels keydown events//
         })
 
 
-      
+
+
     }
   }
-     	
+
 
 
 
