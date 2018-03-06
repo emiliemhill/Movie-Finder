@@ -12,6 +12,10 @@
       // deleteFromList: deletFromList TODO
     }
 
+    function saveToList(movie) {
+      laterList.push(movie); 
+    }
+
     function displayList() {
       return laterList;
     }

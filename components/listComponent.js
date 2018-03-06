@@ -5,6 +5,8 @@
       var $ctrl = this;
       $ctrl.movies = ListService.displayList();
     }
+
+    
   }
 
   angular
