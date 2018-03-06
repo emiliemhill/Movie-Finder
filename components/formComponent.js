@@ -1,5 +1,5 @@
 (function() {
-  var formComponent = {
+	var formComponent = {
     templateUrl: `partials/form.html`,
     controller: function($element) {
       var $ctrl = this;
@@ -28,18 +28,17 @@
           minRange: 0,
           maxRange: 180
         }
+      }
+        $element.find('input').on('keydown', function(ev) {
+		        ev.stopPropagation();
+		  			//stopPropagation allows the search field to be used...The default event for md-select cancels keydown events//
+        })
 
-      };
-			// $ctrl.passValue = function(value){
-			// 	{{value}}
-			// }
-      $element.find('input').on('keydown', function(ev) {
-        ev.stopPropagation();
-        //stopPropagation allows the search field to be used...The default event for md-select cancels keydown events//
-      })
 
+      
     }
   }
+     	
 
 
 

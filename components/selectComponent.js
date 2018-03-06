@@ -14,7 +14,7 @@
         console.log(vm.movieShow);
       }
 
-      MovieService.getLongMovies().then(function(response){
+      MovieService.getMovies().then(function(response){
         vm.movies = response;
         console.log(vm.movies);
       })
