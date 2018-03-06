@@ -13,6 +13,11 @@
       $ctrl.clearSearchTerm = function() {
         $ctrl.searchTerm = '';
       };
+      $ctrl.form = {
+      	minLength: 60,
+ 	    	maxLength: 180
+ 	    };
+
       $ctrl.slider = {
         minValue: 60,
         maxValue: 180,
