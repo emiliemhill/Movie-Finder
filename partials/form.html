@@ -14,7 +14,7 @@
               </md-select-header>
               <md-optgroup label="Genres">
                 <md-option ng-value="genre" ng-repeat="genre in $ctrl.genres |
-	            filter:$ctrl.searchTerm">{{genre}}</md-option>
+	            	filter:$ctrl.searchTerm">{{genre}}</md-option>
               </md-optgroup>
             </md-select>
           </md-input-container>
@@ -26,11 +26,9 @@
       <input-stars ng-model="$ctrl.form.rating" on-star-click="clickHandler(rating)" max="10"></input-stars>
     </div>
 
-    <h3>Length</h3>
-    <rzslider ng-model="$ctrl.form.length" min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}" rz-slider-model="$ctrl.slider.minValue" rz-slider-high="$ctrl.slider.maxValue" rz-slider-options="$ctrl.slider.options"></rzslider>
+    <h3>Run Time (min)</h3>
+    <rzslider min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}" rz-slider-model="$ctrl.form.minLength" rz-slider-high="$ctrl.form.maxLength" rz-slider-options="$ctrl.slider.options"></rzslider>
 
-    <!-- Min: <input type="number" ng-value="$ctrl.form.minValue" ng-model="$ctrl.slider.minValue" ><br>
-    Max: <input type="number" ng-value="$ctrl.form.maxValue" ng-model="$ctrl.slider.maxValue" ><br> -->
 
     <button ng-click="$ctrl.keysearch($ctrl.form)">Search</button>
 
