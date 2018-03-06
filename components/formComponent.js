@@ -7,8 +7,78 @@
       $ctrl.keysearch = function(form) {
         console.log(form);
       }
-      $ctrl.genres = ['Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family', 'Fantasy', 'History', 'Horror', 'Music', 'Mystery', 'Romance', 'Science Fiction', 'Thriller', 'War', 'Western'];
+      $ctrl.genres = [
+        {
+          name: "Action",
+          id: "28"
+        },
+        {
+          name: "Adventure",
+          id: "12"
+        },
+        {
+          name: "Animation",
+          id: "16"
+        },
+        {
+          name: "Comedy",
+          id: "35"
+        },
+        {
+          name: "Crime",
+          id: "80"
+        },
+        {
+          name: "Documentary",
+          id: "99"
+        },
+        {
+          name: "Drama",
+          id: "18"
+        },
+        {
+          name: "Family",
+          id: "10751"
+        },
+        {
+          name: "Fantasy",
+          id: "14"
+        },
+        {
+          name: "History",
+          id: "36"
+        },
+        {
+          name: "Horror",
+          id: "27"
+        },
+        {
+          name: "Music/Musicals",
+          id: "10402"
+        },
+        {
+          name: "Romance",
+          id: "10749"
+        },
+        {
+          name: "Science Fiction",
+          id: "878"
+        },
+        {
+          name: "Thriller",
+          id: "53"
+        },
+        {
+          name: "War",
+          id: "10752"
+        },
+        {
+          name: "Western",
+          id: "37"
+        }
+      ];
       $ctrl.searchTerm;
+      
       //clears search field once you click outside of the drop down//
       $ctrl.clearSearchTerm = function() {
         $ctrl.searchTerm = '';
@@ -31,7 +101,7 @@
       }
         $ctrl.getMovies = function(form) {
           console.log("get movies");
-          console.log(form);
+          console.log(form.genre);
           MovieService.getMovies(form);
           // MovieService.getMovies(genres, minLength, maxLength, minRating, maxRating)
         };
