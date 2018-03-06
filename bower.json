@@ -19,6 +19,7 @@
     "angular-input-stars-directive": "angular-input-stars#^1.8.0",
     "angular-jk-rating-stars": "^1.0.8",
     "components-font-awesome": "^5.0.6",
-    "font-awesome": "^4.0.0"
+    "font-awesome": "^4.0.0",
+    "angularjs-slider": "^6.5.0"
   }
 }
