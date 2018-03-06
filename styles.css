@@ -1,3 +1,11 @@
+.border-radius {
+  border-radius: 50px;
+  box-shadow: 0 10px 0 0 black;
+
+
+}
+
+
 
 .selectdemoSelectHeader {
   /* Please note: All these selectors are only applied to children of elements with the 'selectdemoSelectHeader' class */ }

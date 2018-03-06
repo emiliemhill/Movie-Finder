@@ -9,18 +9,18 @@
 	      <md-input-container>
 	        <label>Genres</label>
 	        <md-select ng-model="$ctrl.form.genre"
-	                   md-on-close="$ctrl.clearSearchTerm()"
-	                   data-md-container-class="selectdemoSelectHeader"
-	                   multiple = "">
-	          <md-select-header class="demo-select-header">
-	            <input ng-model="$ctrl.searchTerm"
-	                   type="search"
-	                   placeholder="Search for a genre.."
-	                   class="demo-header-searchbox md-text">
-	          </md-select-header>
-	          <md-optgroup label="Genres">
-	            <md-option ng-value="genre" ng-repeat="genre in $ctrl.genres |
-	              filter:$ctrl.searchTerm">{{genre}}</md-option>
+           md-on-close="$ctrl.clearSearchTerm()"
+           data-md-container-class="selectdemoSelectHeader"
+           multiple = "">
+  					<md-select-header class="demo-select-header">
+	        		<input ng-model="$ctrl.searchTerm"
+	          		type="search"
+	           		placeholder="Search for a genre..."
+	           		class="demo-header-searchbox md-text">
+	        	</md-select-header>
+	        	<md-optgroup label="Genres">
+	        		<md-option ng-value="genre" ng-repeat="genre in $ctrl.genres |
+	            filter:$ctrl.searchTerm">{{genre}}</md-option>
 	          </md-optgroup>
 	        </md-select>
 	      </md-input-container>
