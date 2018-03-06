@@ -44,7 +44,6 @@
         baseUrl += maxRatingUrl;
       }
 
-
       return $http({
         method: "GET",
         url: baseUrl

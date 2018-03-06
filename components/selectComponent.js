@@ -14,10 +14,7 @@
         console.log(vm.movieShow);
       }
 
-      MovieService.setMovies() {
-        vm.movies = response;
-        console.log(vm.movies);
-      })
+      vm.movies = MovieService.setMovies();
    }
 };
 
