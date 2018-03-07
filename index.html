@@ -9,11 +9,19 @@
   <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link href="styles.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="bower_components/angularjs-slider/dist/rzslider.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
 
   <ng-view></ng-view>
+  <div id = "bottomNav">
+    <div id = "buttons">
+      <a href = "#!/form"><i class="material-icons">search</i></a>
+      <a href = "#!/list"><i class="material-icons">list</i></a>
+      <a href = "#"><i class="material-icons">account_box</i></a>
+    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js"></script>

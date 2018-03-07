@@ -1,9 +1,18 @@
 .border-radius {
   border-radius: 50px;
   box-shadow: 0 10px 0 0 black;
-
-
 }
+
+#buttons {
+  display: flex;
+  justify-content: space-around;
+}
+#bottomNav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+ } 
+  
 
 
 
