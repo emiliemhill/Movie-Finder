@@ -9,7 +9,7 @@
     }
 
     function saveToList(movie) {
-    laterList.push({title: movie});
+    laterList.push(movie);
     console.log(laterList);
     }
 

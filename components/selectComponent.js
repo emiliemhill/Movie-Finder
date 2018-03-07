@@ -4,7 +4,7 @@
       <img class="border-radius" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movies[$ctrl.movieShow].poster_path }}">
       <button ng-click="$ctrl.nextMovie()">Next Movie</button>
       <button ng-click="$ctrl.showMovie()">Show the Movie</button>
-      <button ng-click="$ctrl.saveToList($ctrl.movies[$ctrl.movieShow].title)">Add To List</button>
+      <button ng-click="$ctrl.saveToList($ctrl.movies[$ctrl.movieShow])">Add To List</button>
     </p>`,
       controller: function(MovieService, ListService) {
         var vm = this;
