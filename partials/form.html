@@ -21,7 +21,7 @@
               <md-optgroup label="Genres">
                 <md-option ng-value="name" ng-repeat="name in $ctrl.genres |
 	            	filter:$ctrl.searchTerm">{{name.name}}</md-option>
-                <!-- repeats all the selected genres and shows it in the box after the selection area is clicked out of -->
+                <!-- goes through $ctrl.genres in formComponent and lists the name-->
               </md-optgroup>
             </md-select>
           </md-input-container>
@@ -43,12 +43,10 @@
     <!-- takes the form object and sends everything (genre, rating, time)
     and sends it to $ctrl.getMovies in formComponent, which
     then calls MovieService.getMovies and sends the data as searchObj
-    at this point, button "The Button That Only Gets Movies" shows all the search results that come with baseUrl"-->
+    however, at this point, button "The Button That Only Gets Movies" shows all the search results that come with baseUrl-->
 
 
 
   </form>
 
 </div>
-
-//

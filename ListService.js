@@ -1,6 +1,6 @@
 (function() {
   function ListService() {
-    var laterList ;
+    var laterList = [];
 
     return {
       saveToList: saveToList,
