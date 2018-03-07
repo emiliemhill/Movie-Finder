@@ -1,7 +1,7 @@
 (function() {
 	var formComponent = {
     templateUrl: `partials/form.html`,
-    controller: function($element, MovieService) {
+    controller: function($element, MovieService, $location) {
       var $ctrl = this;
       //this method gathers the form object onto the model//
       $ctrl.keysearch = function(form) {
@@ -106,6 +106,8 @@
           // console.log("get movies");
           // console.log(form.genre);
           MovieService.getMovies(form);
+					$location.path("/select");
+
           // MovieService.getMovies(genres, minLength, maxLength, minRating, maxRating)
         };
         // $ctrl.getMovies();
