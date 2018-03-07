@@ -62,7 +62,7 @@
       }).then(function (response) {
         // console.log("service", response.data.results);
         movieList = response.data.results;
-        console.log("movie list", movieList);
+        //console.log("movie list", movieList);
       });
     }
 
