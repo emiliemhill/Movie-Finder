@@ -13,8 +13,8 @@
     console.log(laterList);
     }
 
-    function deleteFromList() {
-    laterList.pop();
+    function deleteFromList(index) {
+    laterList.splice(index, 1);
     // console.log(laterList);
     }
 
