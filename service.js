@@ -13,12 +13,9 @@
       var genre = searchObj.genre;
       var minLength = searchObj.minLength;
       var maxLength = searchObj.maxLength;
-      var minRating = searchObj.minRating;
-      var maxRating = searchObj.maxRating;
+      var minRating = searchObj.rating;
       console.log("hello");
-      console.log(searchObj);
-      console.log(searchObj.genre);
-      console.log(genre);
+      console.log(searchObj.rating);
 
 
       if (genre) {
@@ -57,6 +54,7 @@
       if (minRating) {
         var minRatingUrl = "&vote_average.gte=" + minRating;
         baseUrl += minRatingUrl;
+        console.log(baseUrl);
       }
 
       return $http({
