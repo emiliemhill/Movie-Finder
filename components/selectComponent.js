@@ -5,12 +5,10 @@
       var vm = this;
       vm.movies = MovieService.setMovies();
       vm.movieShow = 0;
-
       vm.nextMovie = function() {
         vm.movieShow++;
         console.log(vm.movieShow);
       }
-
       vm.showMovies = function() {
         vm.movies = MovieService.setMovies();
       }
