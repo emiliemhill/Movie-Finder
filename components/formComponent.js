@@ -6,8 +6,8 @@
       //this method gathers the form object onto the model//
       $ctrl.keysearch = function(form) {
 			// 	MovieService.getMovies(form).then(function(movie) {
-      //       $ctrl.searchedMovie = movie;
-			// 			console.log($ctrl.searchedMovie);
+      //       // $ctrl.searchedMovie = movie;
+			// 			// console.log($ctrl.searchedMovie);
       // });
 		};
       $ctrl.genres = [
@@ -119,7 +119,7 @@
 
 
 
-    }
+      }
   }
 
 
@@ -130,4 +130,3 @@
     .component("formComponent", formComponent)
 
 })();
-//
