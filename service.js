@@ -5,7 +5,6 @@
     return {
       getMovies: getMovies,
       setMovies: setMovies,
-
     }
 
     function getMovies(searchObj) {
