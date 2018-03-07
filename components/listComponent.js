@@ -4,9 +4,10 @@
     controller: function(ListService) {
       var $ctrl = this;
       $ctrl.movies = ListService.displayList();
+      $ctrl.deleteFromList = function() {
+        ListService.deleteFromList()
+      }
     }
-
-    
   }
 
   angular

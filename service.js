@@ -25,21 +25,21 @@
 
       if (minLength <= 60){
         var lessThan60 = "&with_runtime.lte=60";
-        baseUrl += lessThan60;  
+        baseUrl += lessThan60;
       } else if (minLength > 60) {
         var minLengthUrl = "&with_runtime.gte=" + minLength;
         baseUrl += minLengthUrl;
-      } 
+      }
 
       if (maxLength >= 180) {
         var moreThan180 = "";
-        baseUrl += moreThan180; 
+        baseUrl += moreThan180;
       } else if (maxLength < 180){
         var maxLengthUrl = "&with_runtime.lte=" + maxLength;
         baseUrl += maxLengthUrl;
       }
 
-      
+
 
       if (minRating) {
         var minRatingUrl = "&vote_average.gte=" + minRating;
@@ -55,9 +55,9 @@
         method: "GET",
         url: baseUrl
       }).then(function (response) {
-        console.log("service", response.data.results);
+        // console.log("service", response.data.results);
         movieList = response.data.results;
-        console.log("movie list", movieList);
+        // console.log("movie list", movieList);
       });
     }
 

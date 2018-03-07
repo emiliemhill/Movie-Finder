@@ -1,4 +1,6 @@
-<p>here's the list</p>
+<p>Saved List</p>
 <ol>
   <li ng-repeat="movie in $ctrl.movies">{{ movie.title }}</li>
 </ol>
+
+<button ng-click="$ctrl.deleteFromList(movie.title)">Delete From List </button>

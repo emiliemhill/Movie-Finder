@@ -1,19 +1,21 @@
 (function() {
   function ListService() {
-    var laterList = [
-      {title: "Jurassic Park"},
-      {title: "Jurassic World"},
-      {title: "The Lost World"}
-    ];
+    var laterList = [];
 
     return {
-      // saveToList: saveToList, TODO
-      displayList: displayList
-      // deleteFromList: deletFromList TODO
+      saveToList: saveToList,
+      displayList: displayList,
+      deleteFromList: deleteFromList
     }
 
     function saveToList(movie) {
-      laterList.push(movie);
+    laterList.push({title: movie});
+    console.log(laterList);
+    }
+
+    function deleteFromList() {
+    laterList.pop();
+    // console.log(laterList);
     }
 
     function displayList() {

@@ -8,13 +8,20 @@
         <div layout="row">
           <md-input-container>
             <label>Genres</label>
+
             <md-select ng-model="$ctrl.form.genre" md-on-close="$ctrl.clearSearchTerm()" data-md-container-class="selectdemoSelectHeader" multiple="">
+              <!-- after searching for genre is done and box is closed
+              the input box gets cleared  -->
+
               <md-select-header class="demo-select-header">
+
                 <input ng-model="$ctrl.searchTerm" type="search" placeholder="Search for a genre..." class="demo-header-searchbox md-text">
               </md-select-header>
+              <!-- binds the selected genres to $ctrl.searchTerm -->
               <md-optgroup label="Genres">
                 <md-option ng-value="name" ng-repeat="name in $ctrl.genres |
 	            	filter:$ctrl.searchTerm">{{name.name}}</md-option>
+                <!-- repeats all the selected genres and shows it in the box after the selection area is clicked out of -->
               </md-optgroup>
             </md-select>
           </md-input-container>
@@ -31,9 +38,17 @@
 
 
     <button ng-click="$ctrl.keysearch($ctrl.form)">Search</button>
+    <!-- not activated yet.will be based on inputs????  -->
     <button ng-click="$ctrl.getMovies($ctrl.form)">The Button That Only Gets Movies</button>
+    <!-- takes the form object and sends everything (genre, rating, time)
+    and sends it to $ctrl.getMovies in formComponent, which
+    then calls MovieService.getMovies and sends the data as searchObj
+    at this point, button "The Button That Only Gets Movies" shows all the search results that come with baseUrl"-->
+
 
 
   </form>
 
 </div>
+
+//

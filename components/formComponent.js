@@ -5,7 +5,7 @@
       var $ctrl = this;
       //this method gathers the form object onto the model//
       $ctrl.keysearch = function(form) {
-        console.log(form);
+        // console.log(form);
       }
       $ctrl.genres = [
         {
@@ -78,7 +78,7 @@
         }
       ];
       $ctrl.searchTerm;
-      
+
       //clears search field once you click outside of the drop down//
       $ctrl.clearSearchTerm = function() {
         $ctrl.searchTerm = '';
@@ -100,8 +100,8 @@
         }
       }
         $ctrl.getMovies = function(form) {
-          console.log("get movies");
-          console.log(form.genre);
+          // console.log("get movies");
+          // console.log(form.genre);
           MovieService.getMovies(form);
           // MovieService.getMovies(genres, minLength, maxLength, minRating, maxRating)
         };

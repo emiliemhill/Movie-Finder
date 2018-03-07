@@ -1,10 +1,10 @@
 angular.module('angular-input-stars', [])
     .directive('inputStars', [function () {
-        console.log("test")
+        
         function isFloat(n){
             return Number(n) === n && n % 1 !== 0;
         }
-        
+
         var directive = {
             restrict: 'EA',
             replace: true,
@@ -61,7 +61,7 @@ angular.module('angular-input-stars', [])
 
             scope.getClass = function (index) {
                 var icon;
-                
+
                 if (index >= scope.lastValue) {
                     icon = computed.iconBase + ' ' + computed.emptyIcon;
                 } else {
@@ -117,7 +117,7 @@ angular.module('angular-input-stars', [])
 
             /**
              * Returns whether the user is hovering the first half of the star or not.
-             * 
+             *
              * @param {MouseEvent} e The mouse event.
              * @param {HTMLLIElement} starDOMNode The scope "star" dom node.
              * @returns {boolean}
