@@ -11,8 +11,46 @@
   width: 100%;
   position: fixed;
   bottom: 0;
- } 
-  
+ }
+
+ .poster {
+   width: 75%;
+   margin: 0 auto;
+   display: block;
+ }
+
+ .select p {
+   text-align: center;
+ }
+
+ .selector-container {
+   display: flex;
+   justify-content: center;
+   margin-top: 45px;
+ }
+
+ .selectors {
+   border-radius: 50%;
+   width: 70px;
+   height: 70px;
+   line-height: 70px;
+   text-align: center;
+   margin: 10px;
+ }
+
+ .thumb-down {
+   background-color: #AFD2CF;
+ }
+
+ .watch-later {
+   background-color: #FDC441;
+ }
+
+ .watch-now {
+   background-color: #084C61;
+ }
+
+
 
 
 
