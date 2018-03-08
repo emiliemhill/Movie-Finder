@@ -18,7 +18,7 @@
 
 
       if (genre) {
-        console.log("loop hello");
+        console.log("looping");
         genre.forEach(function(each) {
           console.log(each.id);
 

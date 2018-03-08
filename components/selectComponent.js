@@ -4,11 +4,10 @@
     controller: function(MovieService, ListService) {
       var vm = this;
       vm.movies = MovieService.setMovies();
-      vm.movieShow = 0;
 
       vm.nextMovie = function() {
-        vm.movieShow++;
-        console.log(vm.movieShow);
+        vm.movies.splice(0, 1);
+        console.log(vm.movies);
       }
 
       vm.showMovies = function() {
