@@ -4,20 +4,20 @@
     controller: function(MovieService, ListService, $location, DetailService) {
       var vm = this;
       vm.returned = MovieService.returnParams();
-      vm.movie; 
+      vm.movie;
       // MovieService.getMovies(vm.returned);
       // vm.movies = MovieService.setMovies();
 
 
       console.log(vm.returned);
 
-     
-        
 
-        
-      
+
+
+
+
       vm.showMovie = function() {
-        vm.movie = MovieService.setMovie(); 
+        vm.movie = MovieService.setMovie();
       }
 
       vm.saveToList = function(movie) {
@@ -27,13 +27,13 @@
 
       vm.nextMovie = function(){
         MovieService.nextMovie();
-        var listCheck = MovieService.checkListLength();  
-        vm.showMovie(); 
+        var listCheck = MovieService.checkListLength();
+        vm.showMovie();
         if (listCheck < 3) {
           console.log(listCheck);
 
           console.log("running out of movies");
-          
+
           vm.returned.pagenum++;
           console.log(vm.returned.pagenum);
           console.log(vm.returned);
@@ -57,9 +57,12 @@
       //   MovieService.getMovies(vm.movieparam);
       // }
 
-      
+
+
+
       vm.switchToWatch = function(movie) {
         DetailService.getMovieDetails(movie);
+
         $location.path("/watch");
         console.log("switched");
       }
