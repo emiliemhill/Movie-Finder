@@ -1,11 +1,12 @@
 (function() {
   var watchComponent = {
     templateUrl: `partials/watch.html`,
-    controller: function(WatchService, $location) {
+    controller: function(DetailService, $location) {
       $ctrl = this;
       $ctrl.goBack = function () {
         $location.path("/select");
       }
+
   }
 }
   angular
