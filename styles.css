@@ -12,6 +12,15 @@ header {
   justify-content: center;
 
 }
+.selectors:active, .selectors:focus {
+  border: none;
+  outline: 0;
+}
+button:active, button:focus {
+  border: none;
+  outline: 0;
+  background-color: #323031;
+}
 h3 {
   color: #fdc441;
   font-family: "federo";
