@@ -100,9 +100,9 @@
         $ctrl.getMovies = function(form) {
           // console.log("get movies");
           // console.log(form.genre);
-          MovieService.getMovies(form);
+          // MovieService.getMovies(form);
 					$location.path("/select");
-					// MovieService.getParameters(form);
+					MovieService.getParameters(form);
 					// console.log(MovieService.returnParams());
 
 
