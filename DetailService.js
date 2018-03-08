@@ -1,8 +1,10 @@
 (function() {
-  function DetailService() {
+  function DetailService($http) {
+    var movieDetails;
 
     return {
       getMovieDetails: getMovieDetails,
+      setMovieDetails: setMovieDetails
 
     }
 
@@ -15,8 +17,13 @@
         url: baseUrl + movieID + urlsuffix
       }).then(function (response) {
         // console.log("service", response.data.results);
-        return response.data.results;
+        movieDetails = response.data;
+        console.log(movieDetails);
       });
+    }
+
+    function setMovieDetails() {
+      return movieDetails;
     }
 
 
