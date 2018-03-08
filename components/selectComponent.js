@@ -17,12 +17,6 @@
         ListService.saveToList(movie);
         vm.nextMovie();
       }
-      // if (vm.movieShow >= 20) {
-      //   console.log("Hello");
-      //   vm.movieparam = MovieService.returnParams();
-      //   console.log(vm.movieparam);
-      //   MovieService.getMovies(vm.movieparam);
-      // }
 
       vm.showMovies();
 
