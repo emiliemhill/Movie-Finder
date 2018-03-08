@@ -11,6 +11,7 @@
     }
 
     function getMovies(searchObj) {
+      var pageNumber = searchObj.pagenum;
       var baseUrl = "https://api.themoviedb.org/3/discover/movie?api_key=a420712cee91c2aec196fe700c0ceb35&sort_by=popularity.desc&include_adult=false&include_video=false&vote_count.gte=50";
       var genre = searchObj.genre;
       var minLength = searchObj.minLength;
@@ -59,6 +60,8 @@
         console.log(baseUrl);
       }
 
+      if (pageNumber)
+
       return $http({
         method: "GET",
         url: baseUrl
@@ -76,6 +79,7 @@
 
     function getParameters(parameterObject) {
     parameters = parameterObject;
+    console.log("parameters gotten");
     console.log(parameters);
 
     }
