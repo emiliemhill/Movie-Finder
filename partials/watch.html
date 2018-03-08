@@ -1,2 +1,14 @@
-<p>Hello</p>
+<!-- <div style="background-image:url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movie.backdrop_path }});"> -->
+<div>
+<p> {{ $ctrl.movie.title }}</p>
+<p> released:  {{ $ctrl.movie.release_date.slice(0,4) }}</p>
+<p> runtime: {{ $ctrl.movie.runtime}} minutes</p>
+<p> synopsis: {{ $ctrl.movie.overview }}</p>
+<p> directed by: {{ $ctrl.movie.credits.crew[0].name }} </p>
+<p> starring: {{ $ctrl.movie.credits.cast[0].name }}, {{$ctrl.movie.credits.cast[1].name}}, & {{$ctrl.movie.credits.cast[2].name}}
+<p> <a href="http://imdb.com/title/{{ $ctrl.movie.imdb_id}}" target="_blank"> IMDB</a></p>
+
 <button type="button" ng-click="$ctrl.goBack()">Back</button>
+<button type="button" ng-click="$ctrl.setMovieDetails()">Show Movie</button>
+
+</div>
