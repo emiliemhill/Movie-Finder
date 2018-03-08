@@ -1,13 +1,15 @@
 (function () {
   function MovieService($http) {
-    var movieList;
+    var movieList = [];
     var parameters;
 
     return {
       getMovies: getMovies,
-      setMovies: setMovies,
+      setMovie: setMovie,
       getParameters: getParameters,
-      returnParams: returnParams
+      returnParams: returnParams,
+      nextMovie: nextMovie,
+      checkListLength: checkListLength
     }
 
     function getMovies(searchObj) {
@@ -61,17 +63,25 @@
         url: baseUrl
       }).then(function (response) {
         // console.log("service", response.data.results);
-        movieList = response.data.results;
+        movieList = movieList.concat(response.data.results);
         console.log("retrieving page number", response.data.page);
         console.log(movieList);
         //console.log("movie list", movieList);
       });
     }
 
-    function setMovies() {
-      return movieList;
+    function setMovie() {
+      return movieList[0];
     }
 
+    function nextMovie(){
+      movieList.splice(0, 1);
+    }
+
+    function checkListLength(){
+      return movieList.length; 
+    }
+    
     function getParameters(parameterObject) {
     parameters = parameterObject;
     console.log("parameters gotten");

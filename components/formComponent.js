@@ -3,6 +3,7 @@
     templateUrl: `partials/form.html`,
     controller: function($element, MovieService, $location) {
       var $ctrl = this;
+
       //this method gathers the form object onto the model//
 
       $ctrl.genres = [
@@ -99,10 +100,12 @@
       }
         $ctrl.getMovies = function(form) {
           // console.log("get movies");
-          // console.log(form.genre);
-          // MovieService.getMovies(form);
+         // console.log(form.genre);
+          form.pagenum = 1; 
+          MovieService.getMovies(form);
 					$location.path("/select");
 					MovieService.getParameters(form);
+
 					// console.log(MovieService.returnParams());
 
 

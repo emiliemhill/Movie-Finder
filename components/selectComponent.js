@@ -1,35 +1,23 @@
 (function() {
   var selectComponent = {
     templateUrl: `partials/select.html`,
-    controller: function(MovieService, ListService) {
+    controller: function(MovieService, ListService, $location) {
       var vm = this;
       vm.returned = MovieService.returnParams();
-      MovieService.getMovies(vm.returned);
-      vm.movies = MovieService.setMovies();
-      vm.page = 1;
+      vm.movie; 
+      // MovieService.getMovies(vm.returned);
+      // vm.movies = MovieService.setMovies();
+
 
       console.log(vm.returned);
-      vm.nextMovie = function() {
-        vm.movies.splice(0, 1);
-        console.log(vm.movies);
-        if (vm.movies.length < 3) {
 
-          console.log("running out of movies");
-          vm.page++;
-          console.log(vm.page);
-          vm.returned.pagenum = vm.page;
-          console.log(vm.returned.pagenum);
-          console.log(vm.returned);
-          MovieService.getMovies(vm.returned).then(function() {
-            var newMovies = MovieService.setMovies();
-            vm.movies = vm.movies.concat(newMovies);
-            console.log(vm.movies);
-          });
+     
+        
 
-        }
-      }
-      vm.showMovies = function() {
-        vm.movies = MovieService.setMovies();
+        
+      
+      vm.showMovie = function() {
+        vm.movie = MovieService.setMovie(); 
       }
 
       vm.saveToList = function(movie) {
@@ -37,9 +25,26 @@
         vm.nextMovie();
       }
 
+      vm.nextMovie = function(){
+        MovieService.nextMovie();
+        var listCheck = MovieService.checkListLength();  
+        vm.showMovie(); 
+        if (listCheck < 3) {
+          console.log(listCheck);
+
+          console.log("running out of movies");
+          
+          vm.returned.pagenum++;
+          console.log(vm.returned.pagenum);
+          console.log(vm.returned);
+          MovieService.getMovies(vm.returned);
+        }
+
+      }
 
 
-      vm.nextMovieList = function () {
+
+      vm.nextMovieList = function() {
         console.log("next movie list called")
         // vm.returned = MovieService.returnParams();
         // console.log(vm.returned);
@@ -52,8 +57,11 @@
       //   MovieService.getMovies(vm.movieparam);
       // }
 
-      vm.showMovies();
-
+      
+      vm.switchToWatch = function() {
+        $location.path("/watch");
+        console.log("switched");
+      }
     }
   }
 

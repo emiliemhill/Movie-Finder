@@ -12,6 +12,9 @@
         .when("/form", {
           template: "<form-component></form-component>"
         })
+        .when("/watch", {
+          template: "<watch-component></watch-component>"
+        })
         .otherwise({
           redirectTo: "/form"
         });
