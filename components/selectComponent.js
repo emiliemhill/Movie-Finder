@@ -1,7 +1,7 @@
 (function() {
   var selectComponent = {
     templateUrl: `partials/select.html`,
-    controller: function(MovieService, ListService, $location) {
+    controller: function(MovieService, ListService, $location, DetailService) {
       var vm = this;
       vm.returned = MovieService.returnParams();
       vm.movie; 
@@ -58,7 +58,8 @@
       // }
 
       
-      vm.switchToWatch = function() {
+      vm.switchToWatch = function(movie) {
+        DetailService.getMovieDetails(movie);
         $location.path("/watch");
         console.log("switched");
       }

@@ -6,7 +6,8 @@
 
     }
 
-    function getMovieDetails(movieId) {
+    function getMovieDetails(movie) {
+      console.log(movie);
 
     }
 
