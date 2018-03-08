@@ -54,7 +54,7 @@
       //   MovieService.getMovies(vm.movieparam);
       // }
 
-      vm.showMovies();
+      
       vm.switchToWatch = function() {
         $location.path("/watch");
         console.log("switched");
