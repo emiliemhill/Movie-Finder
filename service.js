@@ -17,22 +17,15 @@
       var minLength = searchObj.minLength;
       var maxLength = searchObj.maxLength;
       var minRating = searchObj.rating;
-      console.log("hello");
-      console.log(searchObj.rating);
+      console.log("searchObj page", searchObj.pagenum);
 
 
       if (genre) {
-        console.log("looping");
+        // console.log("looping through genres");
         genre.forEach(function(each) {
-          console.log(each.id);
-
-
           var genreUrl = "&with_genres=" + each.id;
-          // console.log(genreUrl);
           baseUrl += genreUrl;
-          console.log(baseUrl);
         });
-
       }
 
 
@@ -52,15 +45,16 @@
         baseUrl += lessThan60;
       }
 
-
-
       if (minRating) {
         var minRatingUrl = "&vote_average.gte=" + minRating;
         baseUrl += minRatingUrl;
         console.log(baseUrl);
       }
 
-      if (pageNumber)
+      if (pageNumber) {
+        var pageNumberUrl = "&page=" + pageNumber;
+        baseUrl += pageNumberUrl;
+      }
 
       return $http({
         method: "GET",
@@ -68,6 +62,7 @@
       }).then(function (response) {
         // console.log("service", response.data.results);
         movieList = response.data.results;
+        console.log("retrieving page number", response.data.page);
         console.log(movieList);
         //console.log("movie list", movieList);
       });
