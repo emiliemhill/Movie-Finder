@@ -1,7 +1,7 @@
 (function() {
   var selectComponent = {
     templateUrl: `partials/select.html`,
-    controller: function(MovieService, ListService) {
+    controller: function(MovieService, ListService, $location) {
       var vm = this;
       vm.returned = MovieService.returnParams();
       MovieService.getMovies(vm.returned);
@@ -41,7 +41,7 @@
 
 
 
-      vm.nextMovieList = function () {
+      vm.nextMovieList = function() {
         console.log("next movie list called")
         // vm.returned = MovieService.returnParams();
         // console.log(vm.returned);
@@ -55,7 +55,10 @@
       // }
 
       vm.showMovies();
-
+      vm.switchToWatch = function() {
+        $location.path("/watch");
+        console.log("switched");
+      }
     }
   }
 
