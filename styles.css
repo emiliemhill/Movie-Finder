@@ -1,6 +1,28 @@
+html {
+  background-color: #323031;
+  padding: 10px;
+}
+body{
+  background-color: #323031;
+}
+header {
+  color: #fdc441;
+  font-family: "federo";
+  display: flex;
+  justify-content: center;
+
+}
+h3 {
+  color: #fdc441;
+  font-family: "federo";
+}
+p {
+  font-family: "nunito";
+  color: #fdc441;
+  font-weight: 700;
+}
 .border-radius {
-  border-radius: 50px;
-  box-shadow: 0 10px 0 0 black;
+  border-radius: 35px;
 }
 
 #buttons {
@@ -11,12 +33,16 @@
   width: 100%;
   position: fixed;
   bottom: 0;
+  z-index: 1;
+  background-color: #323031;
  }
 
  .poster {
-   width: 75%;
+   width: 60%;
    margin: 0 auto;
    display: block;
+   padding: 7px;
+   border: 2px solid #8D8880;
  }
 
  .select p {
@@ -26,7 +52,7 @@
  .selector-container {
    display: flex;
    justify-content: center;
-   margin-top: 45px;
+   margin-top: 30px;
 
  }
 
@@ -40,23 +66,26 @@
    cursor: pointer;
  }
 
- .thumb-down {
-   background-color: #AFD2CF;
+
+.navbuttons {
+    color: #8D8880;
  }
-
- .watch-later {
-   background-color: #FDC441;
- }
-
- .watch-now {
-   background-color: #084C61;
- }
-
- .material-icons {
-   color: black; 
- }
-
-
+.selectors {
+  color: #323031;
+  background-color: #AFD2CF;
+}
+.watch-later {
+  background-color: #084C61;
+}
+.fa-star-o:before, .fa-star:before {
+  color: #AFD2CF;
+  display: flex;
+  justify-content: center;
+  margin-left: 25px;
+}
+.rzslider .rz-pointer {
+  background-color :#AFD2CF;
+}
 
 
 
