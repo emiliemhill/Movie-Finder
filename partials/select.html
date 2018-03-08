@@ -1,4 +1,5 @@
 <div class="select">
+<<<<<<< HEAD
     <button ng-click="$ctrl.showMovies()">Show Movies</button>
     <p> {{ $ctrl.movies[0].title }} </p>
     <img class="border-radius poster" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movies[0].poster_path }}">
@@ -6,5 +7,14 @@
       <div ng-click="$ctrl.nextMovie()" class="selectors thumb-down"><i class="material-icons">thumb_down</i></div>
       <div ng-click="$ctrl.saveToList($ctrl.movies[0])" class="selectors watch-later"><i class="material-icons">watch_later</i></div>
       <div class="selectors watch-now">3</div>
+=======
+    <!--<button ng-click="$ctrl.showMovies()">Show Movies</button>-->
+    <p> {{ $ctrl.movies[$ctrl.movieShow].title }} </p>
+    <img class="border-radius poster" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movies[$ctrl.movieShow].poster_path }}">
+    <div class="selector-container">
+      <div ng-click="$ctrl.nextMovie()" class="selectors thumb-down"><i class="material-icons">thumb_down</i></div>
+      <div ng-click="$ctrl.saveToList($ctrl.movies[$ctrl.movieShow])" class="selectors watch-later"><i class="material-icons">watch_later</i></div>
+      <div class="selectors watch-now"><i class="material-icons">thumb_up</i></div>
+>>>>>>> 16f308360c660ed644dacaee1ddce14f2acdc930
     </div>
 </div>
