@@ -1,5 +1,8 @@
-<!-- <div style="background-image:url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movie.backdrop_path }});"> -->
-<div>
+<!-- <div style=;"> -->
+
+<div style="background-image:url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movie.backdrop_path }} );
+background-size: cover; height:75vh; position:relative; width:100%;">
+<!-- <div> -->
 <p> {{ $ctrl.movie.title }}</p>
 <p> released:  {{ $ctrl.movie.release_date.slice(0,4) }}</p>
 <p> runtime: {{ $ctrl.movie.runtime}} minutes</p>
