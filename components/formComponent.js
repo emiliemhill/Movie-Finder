@@ -101,7 +101,8 @@
         $ctrl.getMovies = function(form) {
           // console.log("get movies");
          // console.log(form.genre);
-          form.pagenum = 1; 
+          form.pagenum = 1;
+					MovieService.clearMovieList();
           MovieService.getMovies(form);
 					$location.path("/select");
 					MovieService.getParameters(form);

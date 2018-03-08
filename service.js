@@ -9,7 +9,8 @@
       getParameters: getParameters,
       returnParams: returnParams,
       nextMovie: nextMovie,
-      checkListLength: checkListLength
+      checkListLength: checkListLength,
+      clearMovieList: clearMovieList
     }
 
     function getMovies(searchObj) {
@@ -93,6 +94,10 @@
 
     function returnParams() {
       return parameters;
+    }
+
+    function clearMovieList() {
+      movieList = [];
     }
 
   }
