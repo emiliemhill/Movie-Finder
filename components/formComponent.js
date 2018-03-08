@@ -4,7 +4,7 @@
     controller: function($element, MovieService, $location) {
       var $ctrl = this;
       //this method gathers the form object onto the model//
-      
+
       $ctrl.genres = [
         {
           name: "Action",
@@ -102,6 +102,9 @@
           // console.log(form.genre);
           MovieService.getMovies(form);
 					$location.path("/select");
+					// MovieService.getParameters(form);
+					// console.log(MovieService.returnParams());
+
 
           // MovieService.getMovies(genres, minLength, maxLength, minRating, maxRating)
         };

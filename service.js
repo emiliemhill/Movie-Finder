@@ -1,10 +1,13 @@
 (function () {
   function MovieService($http) {
     var movieList;
+    var parameters;
 
     return {
       getMovies: getMovies,
       setMovies: setMovies,
+      getParameters: getParameters,
+      returnParams: returnParams
     }
 
     function getMovies(searchObj) {
@@ -62,12 +65,23 @@
       }).then(function (response) {
         // console.log("service", response.data.results);
         movieList = response.data.results;
+        console.log(movieList);
         //console.log("movie list", movieList);
       });
     }
 
     function setMovies() {
       return movieList;
+    }
+
+    function getParameters(parameterObject) {
+    parameters = parameterObject;
+    console.log(parameters);
+
+    }
+
+    function returnParams() {
+      return parameters;
     }
 
   }
