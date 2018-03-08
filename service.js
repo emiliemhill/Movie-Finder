@@ -24,10 +24,12 @@
 
       if (genre) {
         // console.log("looping through genres");
+        var genreUrl = "&with_genres=";
         genre.forEach(function(each) {
-          var genreUrl = "&with_genres=" + each.id;
+          genreUrl += "%2C" + each.id;
+          console.log(genreUrl);
+    });
           baseUrl += genreUrl;
-        });
       }
 
 
@@ -79,9 +81,9 @@
     }
 
     function checkListLength(){
-      return movieList.length; 
+      return movieList.length;
     }
-    
+
     function getParameters(parameterObject) {
     parameters = parameterObject;
     console.log("parameters gotten");
