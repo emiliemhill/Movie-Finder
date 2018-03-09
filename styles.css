@@ -5,6 +5,7 @@ html {
 body{
   background-color: #323031;
 }
+#watchTitle,
 header {
   color: #fdc441;
   font-family: "federo";
@@ -12,7 +13,14 @@ header {
   justify-content: center;
 
 }
-.selectors:active, .selectors:focus {
+a {
+  font-family: "nunito";
+  color: #084C61;
+}
+a:visited {
+  text-decoration: none;
+}
+a:active, a:focus, .selectors:active, .selectors:focus {
   border: none;
   outline: 0;
 }
@@ -25,13 +33,33 @@ h3 {
   color: #fdc441;
   font-family: "federo";
 }
+.movieInfo {
+  font-family: "nunito";
+  color: #AFD2CF;
+  font-size: 20px;
+}
 p {
   font-family: "nunito";
   color: #fdc441;
   font-weight: 700;
+  font-size: 25px;
+}
+li {
+  font-family: "nunito";
+  color: #AFD2CF;
+  font-size: 20px;
 }
 .border-radius {
   border-radius: 35px;
+}
+.showButtons {
+  font-family: "nunito";
+  color: #084C61;
+  border: 2px solid #8D8880;
+  border-radius: 35px;
+  font-size: 15px;
+  margin-top: 25px;
+  font-weight: 700;
 }
 
 #buttons {
