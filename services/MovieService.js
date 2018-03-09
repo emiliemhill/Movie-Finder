@@ -5,9 +5,9 @@
 
     return {
       getMovies: getMovies,
-      setMovie: setMovie,
+      getCurrentMovie: getCurrentMovie,
+      setParameters: setParameters,
       getParameters: getParameters,
-      returnParams: returnParams,
       nextMovie: nextMovie,
       checkListLength: checkListLength,
       clearMovieList: clearMovieList
@@ -70,7 +70,7 @@
       });
     }
 
-    function setMovie() {
+    function getCurrentMovie() {
       return movieList[0];
     }
 
@@ -82,11 +82,11 @@
       return movieList.length;
     }
 
-    function getParameters(parameterObject) {
+    function setParameters(parameterObject) {
       parameters = parameterObject;
     }
 
-    function returnParams() {
+    function getParameters() {
       return parameters;
     }
 

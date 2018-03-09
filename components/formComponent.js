@@ -101,9 +101,10 @@
         form.pagenum = 1;
         MovieService.clearMovieList();
         //clears movieList object so no results of prior input sticks around when user puts in new info into form
-        MovieService.getMovies(form);
-        $location.path("/select");
-        MovieService.getParameters(form);
+        MovieService.getMovies(form).then(function() {
+          $location.path("/select");
+        });
+        MovieService.setParameters(form);
       };
       $element.find('input').on('keydown', function(ev) {
         ev.stopPropagation();

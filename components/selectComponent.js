@@ -3,12 +3,8 @@
     templateUrl: `partials/select.html`,
     controller: function(MovieService, ListService, $location, DetailService) {
       var vm = this;
-      vm.returned = MovieService.returnParams();
-      vm.movie;
-      console.log(vm.returned);
-      vm.showMovie = function() {
-        vm.movie = MovieService.setMovie();
-      }
+      vm.returned = MovieService.getParameters();
+      vm.movie = MovieService.getCurrentMovie();
 
       vm.saveToList = function(movie) {
         ListService.saveToList(movie);
@@ -16,9 +12,12 @@
       }
 
       vm.nextMovie = function() {
+        console.log("next movie clicked");
         MovieService.nextMovie();
+        vm.movie = MovieService.getCurrentMovie();
+
+        // MovieService.getCurrentMovie();
         var listCheck = MovieService.checkListLength();
-        vm.showMovie();
         if (listCheck < 3) {
           console.log(listCheck);
           console.log("running out of movies");
@@ -33,10 +32,11 @@
         console.log("next movie list called")
       }
       vm.nextMovieList();
+
       vm.switchToWatch = function(movie) {
-        DetailService.getMovieDetails(movie);
-        $location.path("/watch");
-        console.log("switched");
+        DetailService.getMovieDetails(movie).then(function() {
+          $location.path("/watch");
+        });
       }
     }
   }
