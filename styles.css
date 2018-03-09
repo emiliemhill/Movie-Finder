@@ -1,11 +1,16 @@
 html {
   background-color: #323031;
+  padding: 10px;
+  padding-top: 5px;
 
 }
 
 body {
   background-color: #323031;
+
 }
+
+
 
 #watchTitle,
 .header {
@@ -31,8 +36,41 @@ button:active, button:focus {
   outline: 0;
   background-color: #323031;
 }
-input-stars:focus, input-stars:active{
-  
+
+i:active, i:focus {
+  border: none;
+  outline: 0;
+  background-color: none;
+}
+
+.starsDiv {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+
+element.style {
+}
+
+i.material-icons.searchIcon {
+    color: #8D8880;
+    margin: 0 auto;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+.slider {
+  width: 75%;
+  margin: 0 auto;
 
 }
 
