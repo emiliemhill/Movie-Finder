@@ -32,7 +32,7 @@ button:active, button:focus {
   background-color: #323031;
 }
 input-stars:focus, input-stars:active{
-  
+
 
 }
 
@@ -72,6 +72,10 @@ li {
 
 i.material-icons.navbuttons{
   font-size: 40px;
+}
+
+:target {
+  color: red;
 }
 .showButtons {
   font-family: "nunito";
@@ -115,7 +119,7 @@ i.material-icons.navbuttons{
 }
 
 .selectors {
-  
+
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -194,6 +198,11 @@ i.material-icons.xOut {
 .nav {
   display: none;
 }
+
+.active {
+  color: red;
+}
+
 @media only screen and (min-width : 992px){
   #bottomNav {
     display: none;
@@ -222,7 +231,7 @@ i.material-icons.xOut {
 
   .nav {
     float: right;
-    display: block; 
+    display: block;
   }
 
   .navlinks {
