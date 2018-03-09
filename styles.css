@@ -178,3 +178,20 @@ i.material-icons.xOut {
 .selectdemoSelectHeader md-content._md {
   max-height: 240px;
 }
+@media only screen and (min-width : 992px){
+  #bottomNav {
+    display: none;
+  }
+  #searchForm {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  button.showButtons {
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
