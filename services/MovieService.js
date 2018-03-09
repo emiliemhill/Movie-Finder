@@ -1,7 +1,9 @@
 (function() {
   function MovieService($http) {
     var movieList = [];
+    //declares the empty movie object array that the API call will concat to. 
     var parameters;
+    //declares the parameter variable to be used later
 
     return {
       getMovies: getMovies,
@@ -20,7 +22,7 @@
       var minLength = searchObj.minLength;
       var maxLength = searchObj.maxLength;
       var minRating = searchObj.rating;
-      console.log("searchObj page", searchObj.pagenum);
+      //Variables being assigned the property values of the search object(form)
 
       if (genre) {
         var genreUrl = "&with_genres=";
@@ -29,6 +31,7 @@
           console.log(genreUrl);
         });
         baseUrl += genreUrl;
+
       }
 
       if (minLength >= 60) {
@@ -57,6 +60,7 @@
         var pageNumberUrl = "&page=" + pageNumber;
         baseUrl += pageNumberUrl;
       }
+      //all of these conditionals evaluate the search object, in turn appending the baseUrl of the initial API call accordingly.
 
       return $http({
         method: "GET",
@@ -64,9 +68,7 @@
       }).then(function(response) {
         // console.log("service", response.data.results);
         movieList = movieList.concat(response.data.results);
-        console.log("retrieving page number", response.data.page);
-        console.log(movieList);
-        //console.log("movie list", movieList);
+       //makes the initial API call and concats the resulting objects to the empty movieList array. 
       });
     }
 

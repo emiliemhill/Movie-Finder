@@ -75,6 +75,7 @@
           id: "37"
         }
       ];
+      //$ctrl.genres is the object containing our genres and their corresponding database ID's so we can pass to service//
       $ctrl.searchTerm;
 
       //clears search field once you click outside of the drop down//
@@ -85,6 +86,7 @@
         minLength: 60,
         maxLength: 180
       };
+      //This is the base line value for that sliders, that will change based on the rzslider high and rzslider model values//
 
       $ctrl.slider = {
         minValue: 60,
@@ -96,15 +98,18 @@
           minRange: 0,
           maxRange: 180
         }
+        //The slider object with minValue and maxValue as expressions in the partial so that the slider can be moved between those values//
       }
       $ctrl.getMovies = function(form) {
-        form.pagenum = 1;
+        form.pagenum = 1; //pagenum is added to the object so that it can correspond with the database through the service. Before every new GET this number is incremented by one so the next page of the database can be displayed//
         MovieService.clearMovieList();
         //clears movieList object so no results of prior input sticks around when user puts in new info into form
         MovieService.getMovies(form).then(function() {
           $location.path("/select");
         });
+        //this method grabs the search parameters and sets them in the service, then redirects you to the select component//
         MovieService.setParameters(form);
+        //this method does almost the same as getMovies...It is set in the service and used later to make another call to the API with the updated pagenum//
       };
       $element.find('input').on('keydown', function(ev) {
         ev.stopPropagation();

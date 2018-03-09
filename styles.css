@@ -5,8 +5,8 @@ html {
 
 body {
   background-color: #323031;
-
 }
+
 #watchTitle,
 .header {
   color: #fdc441;
@@ -30,6 +30,10 @@ button:active, button:focus {
   border: none;
   outline: 0;
   background-color: #323031;
+}
+input-stars:focus, input-stars:active{
+  
+
 }
 
 h3 {

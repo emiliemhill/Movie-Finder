@@ -10,6 +10,7 @@
 
     function getMovieDetails(movie) {
       var movieID = movie.id
+      //assigns the id property of movie object to a variable  to be used in the new details API call
       var baseUrl = "https://api.themoviedb.org/3/movie/"
       var urlsuffix = "?api_key=a420712cee91c2aec196fe700c0ceb35&append_to_response=credits"
       return $http({
@@ -17,12 +18,13 @@
         url: baseUrl + movieID + urlsuffix
       }).then(function(response) {
         movieDetails = response.data;
-        console.log(movieDetails);
+        //assigns the response of the API call the the movieDetails variable
       });
     }
 
     function setMovieDetails() {
       return movieDetails;
+      //returns API response through movieDetails variable
     }
   }
 
