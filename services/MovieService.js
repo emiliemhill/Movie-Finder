@@ -23,7 +23,6 @@
       console.log("searchObj page", searchObj.pagenum);
 
       if (genre) {
-        // console.log("looping through genres");
         var genreUrl = "&with_genres=";
         genre.forEach(function(each) {
           genreUrl += "%2C" + each.id;
@@ -85,8 +84,6 @@
 
     function getParameters(parameterObject) {
       parameters = parameterObject;
-      console.log("parameters gotten");
-      console.log(parameters);
     }
 
     function returnParams() {
@@ -98,7 +95,7 @@
     }
   }
 
-  angular
+   angular
     .module("myApp")
     .factory("MovieService", MovieService);
 

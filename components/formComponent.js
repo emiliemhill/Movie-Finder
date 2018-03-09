@@ -100,6 +100,7 @@
       $ctrl.getMovies = function(form) {
         form.pagenum = 1;
         MovieService.clearMovieList();
+        //clears movieList object so no results of prior input sticks around when user puts in new info into form
         MovieService.getMovies(form);
         $location.path("/select");
         MovieService.getParameters(form);

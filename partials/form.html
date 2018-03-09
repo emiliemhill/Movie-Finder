@@ -37,11 +37,10 @@
     <rzslider min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}" rz-slider-model="$ctrl.form.minLength" rz-slider-high="$ctrl.form.maxLength" rz-slider-options="$ctrl.slider.options"></rzslider>
 
     <button type="button" ng-click="$ctrl.getMovies($ctrl.form)">Show Movies</button>
-    <!-- takes the form object and sends everything (genre, rating, time)
+    <!-- takes the form object and sends everything (genre, rating, length)
     and sends it to $ctrl.getMovies in formComponent, which
-    then calls MovieService.getMovies and sends the data as searchObj
-    however, at this point, button "The Button That Only Gets Movies" shows all the search results that come with baseUrl-->
+    then calls MovieService.getMovies and sends the data as searchObj-->
 
-  </form>
+   </form>
 
 </div>
