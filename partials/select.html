@@ -2,7 +2,7 @@
 
     <!-- <button class="showButtons" ng-click="$ctrl.showMovie()">Show Movies</button> -->
 
-    <p> {{ $ctrl.movie.title }} </p>
+    <p class = "movieTitle"> {{ $ctrl.movie.title }} </p>
     <img class="border-radius poster" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movie.poster_path }}">
     <div class="selector-container">
       <div ng-click="$ctrl.nextMovie()" class="selectors thumb-down"><i class="material-icons">thumb_down</i></div>

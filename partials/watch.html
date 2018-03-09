@@ -1,14 +1,17 @@
 <!-- <div style="background-image:url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movie.backdrop_path }});"> -->
 <div>
-<p id= "watchTitle"> {{ $ctrl.movie.title }}</p>
-<p class="movieInfo"> Released:  {{ $ctrl.movie.release_date.slice(0,4) }}</p>
-<p class="movieInfo"> Runtime: {{ $ctrl.movie.runtime}} minutes</p>
-<p class="movieInfo"> Synopsis: {{ $ctrl.movie.overview }}</p>
-<p class="movieInfo"> Director: {{ $ctrl.movie.credits.crew[0].name }} </p>
-<p class="movieInfo"> Starring: {{ $ctrl.movie.credits.cast[0].name }}, {{$ctrl.movie.credits.cast[1].name}}, & {{$ctrl.movie.credits.cast[2].name}}
-<p> <a href="http://imdb.com/title/{{ $ctrl.movie.imdb_id}}" target="_blank"> IMDB</a></p>
-
-<button type="button" class="showButtons" ng-click="$ctrl.goBack()">Back</button>
-<button type="button" class="showButtons" ng-click="$ctrl.setMovieDetails()">Show Movie</button>
+    <p id="watchTitle"> {{ $ctrl.movie.title }}</p>
+    <p class="movieInfo"> Released: {{ $ctrl.movie.release_date.slice(0,4) }}</p>
+    <p class="movieInfo"> Runtime: {{ $ctrl.movie.runtime}} minutes</p>
+    <p class="movieInfo"> Synopsis: {{ $ctrl.movie.overview }}</p>
+    <p class="movieInfo"> Director: {{ $ctrl.movie.credits.crew[0].name }} </p>
+    <p class="movieInfo"> Starring: {{ $ctrl.movie.credits.cast[0].name }}, {{$ctrl.movie.credits.cast[1].name}}, & {{$ctrl.movie.credits.cast[2].name}}
+        <p>
+            <a href="http://imdb.com/title/{{ $ctrl.movie.imdb_id}}" target="_blank"> IMDB</a>
+        </p>
+        <div id="watchButtons">
+            <button type="button" class="showButtons" ng-click="$ctrl.goBack()">Back</button>
+            <button type="button" class="showButtons" ng-click="$ctrl.setMovieDetails()">Show Movie</button>
+        </div>
 
 </div>
