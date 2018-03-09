@@ -1,13 +1,12 @@
 (function() {
-	var formComponent = {
+  var formComponent = {
     templateUrl: `partials/form.html`,
     controller: function($element, MovieService, $location) {
       var $ctrl = this;
 
       //this method gathers the form object onto the model//
 
-      $ctrl.genres = [
-        {
+      $ctrl.genres = [{
           name: "Action",
           id: "28"
         },
@@ -83,9 +82,9 @@
         $ctrl.searchTerm = '';
       };
       $ctrl.form = {
-      	minLength: 60,
- 	    	maxLength: 180
- 	    };
+        minLength: 60,
+        maxLength: 180
+      };
 
       $ctrl.slider = {
         minValue: 60,
@@ -98,39 +97,22 @@
           maxRange: 180
         }
       }
-        $ctrl.getMovies = function(form) {
-          // console.log("get movies");
-         // console.log(form.genre);
-          form.pagenum = 1;
-					MovieService.clearMovieList();
-          MovieService.getMovies(form);
-					$location.path("/select");
-					MovieService.getParameters(form);
-
-					// console.log(MovieService.returnParams());
-
-
-          // MovieService.getMovies(genres, minLength, maxLength, minRating, maxRating)
-        };
-        // $ctrl.getMovies();
-        // $ctrl.getMovies(["18"], undefined, undefined, undefined, undefined);
-
-        $element.find('input').on('keydown', function(ev) {
-		        ev.stopPropagation();
-		  			//stopPropagation allows the search field to be used...The default event for md-select cancels keydown events//
-        })
-
-
-
-
-      }
+      $ctrl.getMovies = function(form) {
+        form.pagenum = 1;
+        MovieService.clearMovieList();
+        //clears movieList object so no results of prior input sticks around when user puts in new info into form
+        MovieService.getMovies(form);
+        $location.path("/select");
+        MovieService.getParameters(form);
+      };
+      $element.find('input').on('keydown', function(ev) {
+        ev.stopPropagation();
+        //stopPropagation allows the search field to be used...The default event for md-select cancels keydown events//
+      })
+    }
   }
-
-
-
 
   angular
     .module("myApp")
     .component("formComponent", formComponent)
-
 })();

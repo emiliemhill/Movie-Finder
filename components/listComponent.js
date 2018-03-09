@@ -6,7 +6,6 @@
       $ctrl.movies = ListService.displayList();
       $ctrl.deleteFromList = function(index) {
         ListService.deleteFromList(index, 1)
-
       }
     }
   }
