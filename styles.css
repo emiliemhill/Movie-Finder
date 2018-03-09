@@ -112,6 +112,8 @@ li {
   text-align: center;
   margin: 10px;
   cursor: pointer;
+  color: #323031;
+  background-color: #AFD2CF;
 }
 #watchButtons {
   display: flex;
@@ -123,10 +125,7 @@ li {
   font-size: 10px;
 }
 
-.selectors {
-  color: #323031;
-  background-color: #AFD2CF;
-}
+
 
 .watch-later {
   background-color: #084C61;
