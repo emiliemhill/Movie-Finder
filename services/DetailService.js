@@ -15,8 +15,7 @@
       return $http({
         method: "GET",
         url: baseUrl + movieID + urlsuffix
-      }).then(function (response) {
-        // console.log("service", response.data.results);
+      }).then(function(response) {
         movieDetails = response.data;
         console.log(movieDetails);
       });
@@ -25,8 +24,6 @@
     function setMovieDetails() {
       return movieDetails;
     }
-
-
   }
 
   angular

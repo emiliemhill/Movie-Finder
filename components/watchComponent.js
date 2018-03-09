@@ -12,9 +12,6 @@
         console.log("click");
         $ctrl.movie = DetailService.setMovieDetails();
       }
-
-      // $ctrl.movie = setMovieDetails();
-
   }
 }
   angular

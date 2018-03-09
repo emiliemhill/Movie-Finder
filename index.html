@@ -4,27 +4,27 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="node_modules/angular-material/angular-material.css"/>
-  <link rel="stylesheet" type= "text/css" href="bower_components/angular-input-stars-directive/angular-input-stars.css" />
+  <link rel="stylesheet" type="text/css" href="node_modules/angular-material/angular-material.css" />
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-input-stars-directive/angular-input-stars.css" />
   <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link href="styles.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="bower_components/angularjs-slider/dist/rzslider.css"/>
+  <link rel="stylesheet" type="text/css" href="bower_components/angularjs-slider/dist/rzslider.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Federo" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
 
-
 </head>
 
 <body>
-  <header><h1>Swipe 'n' Chill</h1></header>
+  <header>
+    <h1>Swipe 'n' Chill</h1></header>
   <ng-view></ng-view>
-  <div id = "bottomNav">
-    <div id = "buttons">
-      <a href = "#!/form"><i class="material-icons navbuttons">search</i></a>
-      <a href = "#!/select"><i class="material-icons navbuttons">local_movies</i></a>
-      <a href = "#!/list"><i class="material-icons navbuttons">list</i></a>
-      <a href = "#"><i class="material-icons navbuttons">account_box</i></a>
+  <div id="bottomNav">
+    <div id="buttons">
+      <a href="#!/form"><i class="material-icons navbuttons">search</i></a>
+      <a href="#!/select"><i class="material-icons navbuttons">local_movies</i></a>
+      <a href="#!/list"><i class="material-icons navbuttons">list</i></a>
+      <a href="#"><i class="material-icons navbuttons">account_box</i></a>
     </div>
   </div>
 
@@ -41,9 +41,9 @@
   <script src="components/selectComponent.js"></script>
   <script src="components/listComponent.js"></script>
   <script src="components/watchComponent.js"></script>
-  <script src="ListService.js"></script>
-  <script src="DetailService.js"></script>
-  <script src="service.js"></script>
+  <script src="services/ListService.js"></script>
+  <script src="services/DetailService.js"></script>
+  <script src="services/MovieService.js"></script>
   <script src="config.js"></script>
 </body>
 

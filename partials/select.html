@@ -1,14 +1,10 @@
 <div class="select">
-
-    <button ng-click="$ctrl.showMovie()">Show Movies</button>
-
-    <p> {{ $ctrl.movie.title }} </p>
-    <img class="border-radius poster" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movie.poster_path }}">
-    <div class="selector-container">
-      <div ng-click="$ctrl.nextMovie()" class="selectors thumb-down"><i class="material-icons">thumb_down</i></div>
-      <div ng-click="$ctrl.saveToList($ctrl.movie)" class="selectors watch-later"><i class="material-icons">watch_later</i></div>
-
-      <div  ng-click="$ctrl.switchToWatch($ctrl.movie)" class="selectors watch-now"><i class="material-icons">thumb_up</i></div>
-
-    </div>
+  <button ng-click="$ctrl.showMovie()">Show Movies</button>
+  <p> {{ $ctrl.movie.title }} </p>
+  <img class="border-radius poster" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movie.poster_path }}">
+  <div class="selector-container">
+    <div ng-click="$ctrl.nextMovie()" class="selectors thumb-down"><i class="material-icons">thumb_down</i></div>
+    <div ng-click="$ctrl.saveToList($ctrl.movie)" class="selectors watch-later"><i class="material-icons">watch_later</i></div>
+    <div ng-click="$ctrl.switchToWatch($ctrl.movie)" class="selectors watch-now"><i class="material-icons">thumb_up</i></div>
+  </div>
 </div>

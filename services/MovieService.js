@@ -1,4 +1,4 @@
-(function () {
+(function() {
   function MovieService($http) {
     var movieList = [];
     var parameters;
@@ -22,17 +22,15 @@
       var minRating = searchObj.rating;
       console.log("searchObj page", searchObj.pagenum);
 
-
       if (genre) {
         // console.log("looping through genres");
         var genreUrl = "&with_genres=";
         genre.forEach(function(each) {
           genreUrl += "%2C" + each.id;
           console.log(genreUrl);
-    });
-          baseUrl += genreUrl;
+        });
+        baseUrl += genreUrl;
       }
-
 
       if (minLength >= 60) {
         var minLengthUrl = "&with_runtime.gte=" + minLength;
@@ -64,7 +62,7 @@
       return $http({
         method: "GET",
         url: baseUrl
-      }).then(function (response) {
+      }).then(function(response) {
         // console.log("service", response.data.results);
         movieList = movieList.concat(response.data.results);
         console.log("retrieving page number", response.data.page);
@@ -77,19 +75,18 @@
       return movieList[0];
     }
 
-    function nextMovie(){
+    function nextMovie() {
       movieList.splice(0, 1);
     }
 
-    function checkListLength(){
+    function checkListLength() {
       return movieList.length;
     }
 
     function getParameters(parameterObject) {
-    parameters = parameterObject;
-    console.log("parameters gotten");
-    console.log(parameters);
-
+      parameters = parameterObject;
+      console.log("parameters gotten");
+      console.log(parameters);
     }
 
     function returnParams() {
@@ -99,7 +96,6 @@
     function clearMovieList() {
       movieList = [];
     }
-
   }
 
   angular

@@ -2,34 +2,40 @@ html {
   background-color: #323031;
   padding: 10px;
 }
-body{
+
+body {
   background-color: #323031;
 }
+
 header {
   color: #fdc441;
   font-family: "federo";
   display: flex;
   justify-content: center;
-
 }
+
 .selectors:active, .selectors:focus {
   border: none;
   outline: 0;
 }
+
 button:active, button:focus {
   border: none;
   outline: 0;
   background-color: #323031;
 }
+
 h3 {
   color: #fdc441;
   font-family: "federo";
 }
+
 p {
   font-family: "nunito";
   color: #fdc441;
   font-weight: 700;
 }
+
 .border-radius {
   border-radius: 35px;
 }
@@ -38,82 +44,90 @@ p {
   display: flex;
   justify-content: space-around;
 }
+
 #bottomNav {
   width: 100%;
   position: fixed;
   bottom: 0;
   z-index: 1;
   background-color: #323031;
- }
+}
 
- .poster {
-   width: 60%;
-   margin: 0 auto;
-   display: block;
-   padding: 7px;
-   border: 2px solid #8D8880;
- }
+.poster {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+  padding: 7px;
+  border: 2px solid #8D8880;
+}
 
- .select p {
-   text-align: center;
- }
+.select p {
+  text-align: center;
+}
 
- .selector-container {
-   display: flex;
-   justify-content: center;
-   margin-top: 30px;
+.selector-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
 
- }
-
- .selectors {
-   border-radius: 50%;
-   width: 70px;
-   height: 70px;
-   line-height: 70px;
-   text-align: center;
-   margin: 10px;
-   cursor: pointer;
- }
-
+.selectors {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+}
 
 .navbuttons {
-    color: #8D8880;
- }
+  color: #8D8880;
+}
+
 .selectors {
   color: #323031;
   background-color: #AFD2CF;
 }
+
 .watch-later {
   background-color: #084C61;
 }
+
 .fa-star-o:before, .fa-star:before {
   color: #AFD2CF;
   display: flex;
   justify-content: center;
   margin-left: 25px;
 }
+
 .rzslider .rz-pointer {
-  background-color :#AFD2CF;
+  background-color: #AFD2CF;
 }
 
-
-
 .selectdemoSelectHeader {
-  /* Please note: All these selectors are only applied to children of elements with the 'selectdemoSelectHeader' class */ }
-  .selectdemoSelectHeader .demo-header-searchbox {
-    border: none;
-    outline: none;
-    height: 100%;
-    width: 100%;
-    padding: 0; }
-  .selectdemoSelectHeader .demo-select-header {
-    /* box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12); */
-    padding-left: 10.667px;
-    height: 48px;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: auto; }
-  .selectdemoSelectHeader md-content._md {
-    max-height: 240px; }
+  /* Please note: All these selectors are only applied to children of elements with the 'selectdemoSelectHeader' class */
+}
+
+.selectdemoSelectHeader .demo-header-searchbox {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.selectdemoSelectHeader .demo-select-header {
+  /* box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12); */
+  padding-left: 10.667px;
+  height: 48px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.selectdemoSelectHeader md-content._md {
+  max-height: 240px;
+}

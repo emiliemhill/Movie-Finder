@@ -9,19 +9,17 @@
     }
 
     function saveToList(movie) {
-    laterList.push(movie);
-    console.log(laterList);
+      laterList.push(movie);
+      console.log(laterList);
     }
 
     function deleteFromList(index) {
-    laterList.splice(index, 1);
-    // console.log(laterList);
+      laterList.splice(index, 1);
     }
 
     function displayList() {
       return laterList;
     }
-
   }
 
   angular
