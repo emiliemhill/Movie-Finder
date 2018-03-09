@@ -4,14 +4,20 @@
     controller: function(MovieService, ListService, $location, DetailService) {
       var $ctrl = this;
       $ctrl.returned = MovieService.getParameters();
-      //This saves the original search parameters so they can be called again if the listcheck conditionals are true. 
+      if (!($ctrl.returned)) {
+        $ctrl.returned = {minLength: 60, maxLength: 180, pagenum: 1};
+        MovieService.getMovies($ctrl.returned).then(function(){
+          $ctrl.movie = MovieService.getCurrentMovie();
+        });
+      }
+      //This saves the original search parameters so they can be called again if the listcheck conditionals are true.
       $ctrl.movie = MovieService.getCurrentMovie();
       //This returns the first index of the movie object array returned from the API call
 
       $ctrl.saveToList = function(movie) {
         ListService.saveToList(movie);
         $ctrl.nextMovie();
-        //This function sets the movie object in the list service to be displayed later in the list component (watch later). It also calls the nextMovie function described below.  
+        //This function sets the movie object in the list service to be displayed later in the list component (watch later). It also calls the nextMovie function described below.
       }
 
       $ctrl.nextMovie = function() {
@@ -20,13 +26,13 @@
         $ctrl.movie = MovieService.getCurrentMovie();
         //returns the spliced movie object array
 
-        
+
         var listCheck = MovieService.checkListLength();
         //returns the length of the movie object array.
         if (listCheck < 3) {
           $ctrl.returned.pagenum++;
           MovieService.getMovies($ctrl.returned);
-          //Checks if movie array is below three, if it is, the pagenum property of returned(The original search params) is incremented and another call to the API is made to grab the second page of the original return. 
+          //Checks if movie array is below three, if it is, the pagenum property of returned(The original search params) is incremented and another call to the API is made to grab the second page of the original return.
         }
       }
       $ctrl.switchToWatch = function(movie) {
