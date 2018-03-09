@@ -7,7 +7,7 @@ body {
   background-color: #323031;
 }
 #watchTitle,
-header {
+.header {
   color: #fdc441;
   font-family: "federo";
   display: flex;
@@ -39,7 +39,7 @@ h3 {
   color: #fdc441;
   font-family: "federo";
   font-size: 20px;
-  margin-top: 5px; 
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 .movieInfo {
@@ -178,6 +178,10 @@ i.material-icons.xOut {
 .selectdemoSelectHeader md-content._md {
   max-height: 240px;
 }
+
+.nav {
+  display: none;
+}
 @media only screen and (min-width : 992px){
   #bottomNav {
     display: none;
@@ -193,5 +197,27 @@ i.material-icons.xOut {
     width: 25%;
     margin: 0 auto;
     margin-top: 15px;
+  }
+  #desktopnav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header {
+    float: left;
+
+  }
+
+  .nav {
+    float: right;
+    display: block; 
+  }
+
+  .navlinks {
+    padding: 10px;
+    text-decoration: none;
+    font-family: "nunito";
+    color: #AFD2CF;
+    font-size: 20px;
   }
 }
