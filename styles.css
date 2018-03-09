@@ -35,6 +35,13 @@ h3 {
   color: #fdc441;
   font-family: "federo";
 }
+.movieTitle {
+  color: #fdc441;
+  font-family: "federo";
+  font-size: 20px;
+  margin-top: 5px; 
+  margin-bottom: 5px;
+}
 .movieInfo {
   font-family: "nunito";
   color: #AFD2CF;
@@ -50,6 +57,8 @@ li {
   font-family: "nunito";
   color: #AFD2CF;
   font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 .border-radius {
@@ -61,7 +70,6 @@ li {
   border: 2px solid #8D8880;
   border-radius: 35px;
   font-size: 15px;
-  margin-top: 25px;
   font-weight: 700;
 }
 
@@ -105,9 +113,14 @@ li {
   margin: 10px;
   cursor: pointer;
 }
+#watchButtons {
+  display: flex;
+  justify-content: center;
 
+}
 .navbuttons {
   color: #8D8880;
+  font-size: 10px;
 }
 
 .selectors {
@@ -129,9 +142,18 @@ li {
 .rzslider .rz-pointer {
   background-color: #AFD2CF;
 }
+md-optgroup{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+i.material-icons.xOut {
+  color: #AFD2CF;
+  position: relative;
+  top: 5px;
+  float: right;
 
-.selectdemoSelectHeader {
-  /* Please note: All these selectors are only applied to children of elements with the 'selectdemoSelectHeader' class */
 }
 
 .selectdemoSelectHeader .demo-header-searchbox {
