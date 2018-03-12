@@ -1,12 +1,12 @@
-(function() {
+(function () {
   var selectComponent = {
     templateUrl: `partials/select.html`,
-    controller: function(MovieService, ListService, $location, DetailService) {
+    controller: function (MovieService, ListService, $location, DetailService) {
       var $ctrl = this;
       $ctrl.returned = MovieService.getParameters();
       if (!($ctrl.returned)) {
-        $ctrl.returned = {minLength: 60, maxLength: 180, pagenum: 1};
-        MovieService.getMovies($ctrl.returned).then(function(){
+        $ctrl.returned = { minLength: 60, maxLength: 180, pagenum: 1 };
+        MovieService.getMovies($ctrl.returned).then(function () {
           $ctrl.movie = MovieService.getCurrentMovie();
         });
       }
@@ -14,13 +14,13 @@
       $ctrl.movie = MovieService.getCurrentMovie();
       //This returns the first index of the movie object array returned from the API call
 
-      $ctrl.saveToList = function(movie) {
+      $ctrl.saveToList = function (movie) {
         ListService.saveToList(movie);
         $ctrl.nextMovie();
         //This function sets the movie object in the list service to be displayed later in the list component (watch later). It also calls the nextMovie function described below.
       }
 
-      $ctrl.nextMovie = function() {
+      $ctrl.nextMovie = function () {
         MovieService.nextMovie();
         // calls the movieservice method to splice the first index(movie) being displayed
         $ctrl.movie = MovieService.getCurrentMovie();
@@ -35,8 +35,8 @@
           //Checks if movie array is below three, if it is, the pagenum property of returned(The original search params) is incremented and another call to the API is made to grab the second page of the original return.
         }
       }
-      $ctrl.switchToWatch = function(movie) {
-        DetailService.getMovieDetails(movie).then(function() {
+      $ctrl.switchToWatch = function (movie) {
+        DetailService.getMovieDetails(movie).then(function () {
           $location.path("/watch");
           //this function uses the movie object to make a separate API call for more details to be displayed in the watch component view. It also redirects you to said component. Because we're good like that
         });
