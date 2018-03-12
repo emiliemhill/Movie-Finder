@@ -4,13 +4,14 @@
     controller: function(MovieService, ListService, $location, DetailService) {
       var $ctrl = this;
       $ctrl.returned = MovieService.getParameters();
+        //This saves the original search parameters so they can be called again if the listcheck conditionals are true.
       if (!($ctrl.returned)) {
         $ctrl.returned = {minLength: 60, maxLength: 180, pagenum: 1};
         MovieService.getMovies($ctrl.returned).then(function(){
           $ctrl.movie = MovieService.getCurrentMovie();
         });
       }
-      //This saves the original search parameters so they can be called again if the listcheck conditionals are true.
+
       $ctrl.movie = MovieService.getCurrentMovie();
       //This returns the first index of the movie object array returned from the API call
 

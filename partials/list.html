@@ -1,7 +1,8 @@
 <!-- Displays laterList movie object array from list service
  -->
 <p>Saved for Later</p>
+<div "listsearch">
+<input  type="text" placeholder="Search" ng-model="search"></div>
 <ol>
-  <input type="text" placeholder="Search" ng-model="search">
-  <li ng-click="$ctrl.checkDetails(movie)" ng-repeat="movie in $ctrl.movies | filter: search track by $index" >{{ movie.title }}<i class="material-icons xOut" ng-click="$ctrl.deleteFromList($index)"><i class="material-icons">  highlight_off</i></i></li>
+  <li ng-animate="animate" ng-click="$ctrl.checkDetails(movie)" ng-repeat="movie in $ctrl.movies | filter: search track by $index" >{{ movie.title }}<i class="material-icons xOut" ng-click="$ctrl.deleteFromList($index)"><i class="material-icons">  highlight_off</i></i></li>
 </ol>

@@ -31,16 +31,16 @@
     <div>
       <h3>Rating</h3>
       <input-stars ng-model="$ctrl.form.rating" on-star-click="clickHandler(rating)" max="10" class="stars"></input-stars>
-      <!-- Binds rating parameter to the form object. --> 
+      <!-- Binds rating parameter to the form object. -->
     </div>
 
     <h3>Run Time (min)</h3>
     <rzslider min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}" rz-slider-model="$ctrl.form.minLength" rz-slider-high="$ctrl.form.maxLength" rz-slider-options="$ctrl.slider.options"></rzslider>
-    <!-- The adjustable sliders are bound to the controller, and the rz slider model and rz slider high are the final values --> 
+    <!-- The adjustable sliders are bound to the controller, and the rz slider model and rz slider high are the final values -->
 
 
 
-    <!-- not activated yet.will be based on inputs????  -->
+
     <button type="button" class="showButtons" ng-click="$ctrl.getMovies($ctrl.form)">Show Movies</button>
     <!-- takes the form object and sends everything (genre, rating, time)
     and sends it to $ctrl.getMovies in formComponent, which
