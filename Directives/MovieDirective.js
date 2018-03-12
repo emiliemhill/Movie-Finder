@@ -2,20 +2,13 @@
   function fadeIn() {
     return {
       link: function($scope, $element, $attrs) {
-        $element.on("onLoad", function() {
-          console.log("Hello");
-          // $element.css("display", "none");
-          $element.fadeIn(500);
-
-      //   });
-      //   $element.on("mouseout", function (){
-      //     $element.css("color", "white")
-      //   })
-      // }
-    })
+        $element.css("display", "block")
+        //   console.log("Hello");
+         
+        // })
+      }
+    }
   }
-}
-}
   angular
     .module("myApp")
     .directive("fadeIn", fadeIn);
