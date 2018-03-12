@@ -2,11 +2,15 @@
  -->
 <p>Saved for Later</p>
 <div>
-<input  type="text" placeholder="Search" ng-model="search"></div>
+  <input type="text" placeholder="Search" ng-model="search">
+</div>
 <ol id="savedlist">
-  <li ng-click="$ctrl.checkDetails(movie)" ng-repeat="movie in $ctrl.movies | filter: search track by $index" >{{ movie.title }}
+  <li ng-repeat="movie in $ctrl.movies | filter: search track by $index">
+    <p ng-click="$ctrl.checkDetails(movie)">{{ movie.title }}</p>
     <i class="material-icons xOut" ng-click="$ctrl.deleteFromList($index)">
 
-  <i class="material-icons">  highlight_off</i></i></li>
+      <i class="material-icons"> highlight_off</i>
+    </i>
+  </li>
 
 </ol>
