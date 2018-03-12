@@ -42,6 +42,15 @@
           //this function uses the movie object to make a separate API call for more details to be displayed in the watch component view. It also redirects you to said component. Because we're good like that
         });
       }
+
+      $ctrl.onSwipeLeft = function() {
+        console.log('swiped left');
+      }
+
+      $ctrl.onClick = function() {
+        console.log("clicked");
+      }
+
     }
   }
 
