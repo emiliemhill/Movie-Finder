@@ -264,6 +264,22 @@ i.material-icons.xOut {
   transform: translateY(200px);
 }
 
+/* .fade-in-out {
+  transition: 1s linear all;
+  opacity: 0;
+}
+
+.fade-in-out.ng-show {
+  opacity: 1;
+} */
+/* 
+.sample-show-show {
+  transition: all linear 0.5s;
+}
+.sample-show-hide.ng-show {
+  opacity: 0;
+} */
+
 @media only screen and (min-width : 992px){
   #bottomNav {
     display: none;
