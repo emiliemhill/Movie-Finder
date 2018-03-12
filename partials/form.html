@@ -37,6 +37,7 @@
 
     <h3>Run Time (min)</h3>
 
+
     <div class="slider">
       <rzslider min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}" rz-slider-model="$ctrl.form.minLength" rz-slider-high="$ctrl.form.maxLength"
         rz-slider-options="$ctrl.slider.options"></rzslider>
@@ -44,14 +45,7 @@
     <!-- The adjustable sliders are bound to the controller, and the rz slider model and rz slider high are the final values -->
 
 
-    <i class="material-icons searchIcon" ng-click="$ctrl.getMovies($ctrl.form)">movie</i>
+    <i class="material-icons searchIcon" ng-click="$ctrl.getMovies($ctrl.form); show=!show">movie</i>
     <h3>Search and Swipe</h3>
     <!-- not activated yet.will be based on inputs????  -->
     <!-- <button type="button" class="showButtons" ng-click="$ctrl.getMovies($ctrl.form)">Show Movies</button> -->
-    <!-- takes the form object and sends everything (genre, rating, time)
-    and sends it to $ctrl.getMovies in formComponent, which
-    then calls MovieService.getMovies and sends the data as searchObj-->
-
-  </form>
-
-</div>

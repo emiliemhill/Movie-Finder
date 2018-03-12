@@ -214,7 +214,6 @@ i.material-icons.xOut {
   position: relative;
   top: 5px;
   float: right;
-  font-size: 40px;
 }
 
 .selectdemoSelectHeader .demo-header-searchbox {
@@ -255,30 +254,8 @@ i.material-icons.xOut {
 
 #savedlist li.ng-leave {
   transition: 0.2s ease-in-out all;
-  opacity: 0;
-  /* transform: translateY(30px); */
+  transform: translateX(100px);
 }
-
-#savedlist li.ng-leave.ng-leave-active {
-  opacity: 1;
-  transform: translateY(200px);
-}
-
-/* .fade-in-out {
-  transition: 1s linear all;
-  opacity: 0;
-}
-
-.fade-in-out.ng-show {
-  opacity: 1;
-} */
-/* 
-.sample-show-show {
-  transition: all linear 0.5s;
-}
-.sample-show-hide.ng-show {
-  opacity: 0;
-} */
 
 @media only screen and (min-width : 992px){
   #bottomNav {
