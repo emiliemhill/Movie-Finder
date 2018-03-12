@@ -100,12 +100,21 @@ p {
   font-weight: 700;
   font-size: 25px;
 }
+ol {
+  overflow: scroll;
+  max-height: 62%;
+}
+li p,
 li {
   font-family: "nunito";
   color: #AFD2CF;
   font-size: 20px;
   margin-bottom: 15px;
-  padding-bottom: 20px;
+  position: relative;
+}
+li p {
+  width: 85%;
+  display: inline-block;
 }
 
 .border-radius {
@@ -209,9 +218,12 @@ md-optgroup{
 
 i.material-icons.xOut {
   color: #AFD2CF;
-  position: relative;
-  top: 5px;
-  float: right;
+
+  position: absolute;
+  top: 52%;
+  transform:translateY(-50%);
+  right: 0;
+  z-index: 20;
 }
 
 .selectdemoSelectHeader .demo-header-searchbox {
@@ -259,6 +271,10 @@ i.material-icons.xOut {
 #savedlist li.ng-leave.ng-leave-active {
  opacity: 1;
  transform: translateX(200px);
+}
+
+ol {
+  list-style-type: none;
 }
 
 
