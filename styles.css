@@ -103,6 +103,7 @@ p {
 ol {
   overflow: scroll;
   max-height: 62%;
+  list-style-type: none;
 }
 li p,
 li {
