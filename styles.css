@@ -251,11 +251,19 @@ i.material-icons.xOut {
 }
 
 #savedlist li.ng-leave {
-  transition: 0.2s ease-in-out all;
-  transform: translateX(100px);
+ transition: 0.2s ease-in-out all;
+ opacity: 0;
+ /* transform: translateY(30px); */
 }
 
-.select {
+#savedlist li.ng-leave.ng-leave-active {
+ opacity: 1;
+ transform: translateX(200px);
+}
+
+
+
+.select, .form, .list, #formdiv {
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
   -ms-animation: fadein 2s; /* Internet Explorer */
@@ -291,6 +299,7 @@ i.material-icons.xOut {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
 @media only screen and (min-width : 992px){
   #bottomNav {
     display: none;
