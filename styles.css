@@ -100,11 +100,11 @@ p {
   font-weight: 700;
   font-size: 25px;
 }
-ol {
+/* ol {
   overflow: scroll;
   max-height: 62%;
   list-style-type: none;
-}
+} */
 li p,
 li {
   font-family: "nunito";
@@ -171,6 +171,7 @@ margin-top: 25px;
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  flex-direction: row;
 }
 
 .selectors {
@@ -326,7 +327,7 @@ ol {
   to   { opacity: 1; }
 }
 
-@media only screen and (min-width : 992px){
+@media only screen and (min-width : 1024px){
   #bottomNav {
     display: none;
   }
@@ -363,5 +364,20 @@ ol {
     font-family: "nunito";
     color: #AFD2CF;
     font-size: 20px;
+  }
+
+  .select {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+  }
+
+  .poster {
+    width: 35%;
+  }
+
+  .movieTitle {
+display: inline-block;
+vertical-align: top;
   }
 }
