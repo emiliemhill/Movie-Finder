@@ -136,7 +136,9 @@ i.material-icons.navbuttons{
   border-radius: 35px;
   font-size: 15px;
   font-weight: 700;
-  margin: 0 auto;
+  display: block;
+margin: 0 auto;
+margin-top: 25px;
 }
 
 #buttons {
@@ -193,6 +195,13 @@ i.material-icons.navbuttons{
   font-size: 10px;
 }
 
+#listsearchdiv {
+  text-align: center;
+}
+
+.list .listtitle {
+  text-align: center;
+}
 
 
 .watch-later {
@@ -330,9 +339,9 @@ ol {
   }
   button.showButtons {
     width: 25%;
-    margin: 0 auto;
     margin-top: 15px;
   }
+
   #desktopnav {
     display: flex;
     justify-content: space-between;
