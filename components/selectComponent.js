@@ -8,10 +8,10 @@
       if (!($ctrl.returned)) {
         $ctrl.returned = { minLength: 60, maxLength: 180, pagenum: 1 };
         MovieService.getMovies($ctrl.returned).then(function () {
-          
+
           $ctrl.movie = MovieService.getCurrentMovie();
           $ctrl.movie.forEach(function(movie){
-          movie.swiped = false; 
+          movie.swiped = false;
       })
 
         }).then(function(){
@@ -19,7 +19,7 @@
         });
       }
 
-     
+
       //This returns the first index of the movie object array returned from the API call
 
       $ctrl.saveToList = function (movie) {
@@ -29,16 +29,16 @@
       }
 
       $ctrl.deleteMovie = function(){
-        $ctrl.movie.splice(0, 1); 
+        $ctrl.movie.splice(0, 1);
       }
 
       $ctrl.nextMovie = function () {
         // var el = document.getElementById("posterSwipe");
         // el.classList.add("animated","bounceOutLeft");
         $ctrl.movie[0].swiped = true;
-        $timeout($ctrl.deleteMovie, 0);  
+        $timeout($ctrl.deleteMovie, 240);  
         console.log($ctrl.movie)
-        
+
         // MovieService.nextMovie();
         // calls the movieservice method to splice the first index(movie) being displayed
         // $ctrl.movie = MovieService.getCurrentMovie();

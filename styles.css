@@ -3,6 +3,12 @@ html {
   padding: 10px;
   padding-top: 5px;
 }
+
+.movie {
+  position: absolute;
+}
+
+
 #listsearch {
   text-align: center;
 }
@@ -15,6 +21,7 @@ body {
 .selector-container-desktop {
   display: none;
 }
+
 #watchTitle,
 .header {
   color: #fdc441;
@@ -334,7 +341,7 @@ ol {
   }
   #tabletSelectors {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
   }
   .selector-container-desktop {
     display: none;
@@ -400,6 +407,6 @@ ol {
   #desktopSelectors {
     display: flex;
     justify-content: center;
-    
+
   }
 }

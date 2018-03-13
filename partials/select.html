@@ -1,6 +1,6 @@
 <!-- This partial displays the properties from the returned API objects-->
 <div class="select fade">
-  <div ng-class = "{'animated bounceOutLeft' : movie.swiped}" ng-repeat="movie in $ctrl.movie">
+  <div class="movie" ng-class = "{'animated bounceOutLeft' : movie.swiped}" ng-repeat="movie in $ctrl.movie" ng-style="{'z-index' : $index * -1 }">
   <p class="movieTitle"> {{ movie.title }} </p>
   <img class="border-radius poster" md-swipe-right="$ctrl.switchToWatch($ctrl.movie)" md-swipe-left="$ctrl.nextMovie()" ng-click="$ctrl.onClick()"
     ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ movie.poster_path }}">
