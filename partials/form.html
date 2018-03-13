@@ -1,26 +1,28 @@
 <div class="form">
   <form id="searchForm">
-
     <h3>Genre</h3>
     <div id="genreSelect">
-      <p ng-repeat="genre in $ctrl.genres" ng-click="$ctrl.pickGenre(genre)"  ng-class="{'selectedP' : genre.toggle }">{{ genre.name }}</p>
+      <p ng-repeat="genre in $ctrl.genres" ng-click="$ctrl.pickGenre(genre)" ng-class="{'selectedP' : genre.toggle }">{{ genre.name }}</p>
     </div>
     <h3>Rating</h3>
     <div class="starsDiv">
       <input-stars ng-model="$ctrl.form.rating" on-star-click="clickHandler(rating)" max="10" class="stars"></input-stars>
       <!-- Binds rating parameter to the form object. -->
     </div>
-
     <h3>Run Time</h3>
-
-
     <div class="slider">
       <rzslider min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}" rz-slider-model="$ctrl.form.minLength" rz-slider-high="$ctrl.form.maxLength"
         rz-slider-options="$ctrl.slider.options"></rzslider>
     </div>
     <!-- The adjustable sliders are bound to the controller, and the rz slider model and rz slider high are the final values -->
-
-
-   <div><button type="button" class="showButtons" ng-click="$ctrl.getMovies($ctrl.form)">Show Movies</button></div>
+    <!-- <h3>Year</h3>
+    <div class="yearSlider">
+      <rzslider min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}" rz-slider-model="" rz-slider-high="" rz-slider-options=""></rzslider>
+    </div> -->
+    <div>
+      <button type="button" class="showButtons" ng-click="$ctrl.getMovies($ctrl.form)">Show Movies</button>
+    </div>
     <!-- not activated yet.will be based on inputs????  -->
     <!-- <button type="button" class="showButtons" ng-click="$ctrl.getMovies($ctrl.form)">Show Movies</button> -->
+  </form>
+</div>

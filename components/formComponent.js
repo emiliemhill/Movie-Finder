@@ -127,31 +127,44 @@
           minRange: 0,
           maxRange: 180
         }
-        //The slider object with minValue and maxValue as expressions in the partial so that the slider can be moved between those values//
-      }
-      $ctrl.getMovies = function (form) {
-        console.log(form);
-        form.pagenum = 1;
-        //pagenum is added to the object so that it can correspond with the database through the service. Before every new GET this number is incremented by one so the next page of the database can be displayed//
-        form.genre = $ctrl.searchGenre;
-        console.log(form);
-        MovieService.clearMovieList();
-        //clears movieList object so no results of prior input sticks around when user puts in new info into form
-        MovieService.getMovies(form).then(function () {
-          $location.path("/select");
-        });
-        //this method grabs the search parameters and sets them in the service, then redirects you to the select component//
-        MovieService.setParameters(form);
-        //this method does almost the same as getMovies...It is set in the service and used later to make another call to the API with the updated pagenum//
       };
-      $element.find('input').on('keydown', function (ev) {
-        ev.stopPropagation();
-        //stopPropagation allows the search field to be used...The default event for md-select cancels keydown events//
-      })
+        //The slider object with minValue and maxValue as expressions in the partial so that the slider can be moved between those values//
+
+        // $ctrl.yearSlider = {
+        // minValue: 1920,
+        // maxValue: 2018,
+        // options: {
+        //   floor: 1920,
+        //   ceil: 2018,
+        //   step: 1,
+        //   minRange: 1920,
+        //   maxRange: 2018
+        //   }
+        // };
+
+      $ctrl.getMovies = function (form) {
+          console.log(form);
+          form.pagenum = 1;
+          //pagenum is added to the object so that it can correspond with the database through the service. Before every new GET this number is incremented by one so the next page of the database can be displayed//
+          form.genre = $ctrl.searchGenre;
+          console.log(form);
+          MovieService.clearMovieList();
+          //clears movieList object so no results of prior input sticks around when user puts in new info into form
+          MovieService.getMovies(form).then(function () {
+            $location.path("/select");
+          });
+          //this method grabs the search parameters and sets them in the service, then redirects you to the select component//
+          MovieService.setParameters(form);
+          //this method does almost the same as getMovies...It is set in the service and used later to make another call to the API with the updated pagenum//
+        };
+        $element.find('input').on('keydown', function (ev) {
+          ev.stopPropagation();
+          //stopPropagation allows the search field to be used...The default event for md-select cancels keydown events//
+        })
+      }
     }
-  }
 
   angular
     .module("myApp")
-    .component("formComponent", formComponent)
-})();
+        .component("formComponent", formComponent)
+  })();
