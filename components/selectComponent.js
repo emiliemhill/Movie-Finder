@@ -36,7 +36,7 @@
         // var el = document.getElementById("posterSwipe");
         // el.classList.add("animated","bounceOutLeft");
         $ctrl.movie[0].swiped = true;
-        $timeout($ctrl.deleteMovie, 240);  
+        $timeout($ctrl.deleteMovie, 240);
         console.log($ctrl.movie)
 
         // MovieService.nextMovie();
