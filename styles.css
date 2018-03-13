@@ -58,7 +58,9 @@ button:active, button:focus {
   outline: 0;
 }
 .selectedP{
-  background-color: red;
+  box-shadow: 2px 0px 15px 8px rgba(253, 196, 65, 0.4);
+  background-color: rgba(253, 196, 65, 0.4);
+  border-radius: 10px;
 }
 
 i:active, i:focus {
