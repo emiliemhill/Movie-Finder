@@ -1,7 +1,8 @@
 <!-- This partial displays the properties from the returned API objects-->
 <div class="select fade">
   <p class="movieTitle"> {{ $ctrl.movie.title }} </p>
-  <img class="border-radius poster" md-swipe-right="$ctrl.switchToWatch($ctrl.movie)" md-swipe-left="$ctrl.nextMovie()" ng-click="$ctrl.onClick()" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movie.poster_path }}">
+  <img class="border-radius poster" md-swipe-right="$ctrl.switchToWatch($ctrl.movie)" md-swipe-left="$ctrl.nextMovie()" ng-click="$ctrl.onClick()"
+    ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movie.poster_path }}">
   <div class="selector-container">
     <div ng-click="$ctrl.nextMovie()" class="selectors thumb-down">
       <i class="material-icons">thumb_down</i>
@@ -12,5 +13,21 @@
     <div ng-click="$ctrl.switchToWatch($ctrl.movie)" class="selectors watch-now">
       <i class="material-icons">thumb_up</i>
     </div>
+  </div>
+  <div class="selector-container-desktop">
+    <p class="movieTitleDesktop"> {{ $ctrl.movie.title }} </p>
+    <div id = "desktopSelectors">
+    <div ng-click="$ctrl.nextMovie()" class="selectors thumb-down">
+      <i class="material-icons">thumb_down</i>
+    </div>
+    <div ng-click="$ctrl.saveToList($ctrl.movie)" class="selectors watch-later">
+      <i class="material-icons">watch_later</i>
+    </div>
+    <div ng-click="$ctrl.switchToWatch($ctrl.movie)" class="selectors watch-now">
+      <i class="material-icons">thumb_up</i>
+    </div>
+    </div>
+    <p class="movieInfo"> {{ $ctrl.movie.release_date.slice(0,4) }}</p>
+    <p class="movieInfo"> {{ $ctrl.movie.overview }}</p>
   </div>
 </div>

@@ -1,80 +1,109 @@
 (function () {
   var formComponent = {
     templateUrl: `partials/form.html`,
-    controller: function ($element, MovieService, $location) {
+    controller: function ($element, MovieService, $location, $scope) {
       var $ctrl = this;
+      $ctrl.searchGenre = [];
 
       //this method gathers the form object onto the model//
 
       $ctrl.genres = [{
         name: "Action",
-        id: "28"
+        id: "28",
+        toggle: false
       },
       {
         name: "Adventure",
-        id: "12"
+        id: "12",
+        toggle: false
       },
       {
         name: "Animation",
-        id: "16"
+        id: "16",
+        toggle: false
       },
       {
         name: "Comedy",
-        id: "35"
+        id: "35",
+        toggle: false
       },
       {
         name: "Crime",
-        id: "80"
+        id: "80",
+        toggle: false
       },
       {
         name: "Documentary",
-        id: "99"
+        id: "99",
+        toggle: false
       },
       {
         name: "Drama",
-        id: "18"
+        id: "18",
+        toggle: false
       },
       {
         name: "Family",
-        id: "10751"
+        id: "10751",
+        toggle: false
       },
       {
         name: "Fantasy",
-        id: "14"
+        id: "14",
+        toggle: false
       },
       {
         name: "History",
-        id: "36"
+        id: "36",
+        toggle: false
       },
       {
         name: "Horror",
-        id: "27"
+        id: "27",
+        toggle: false
       },
       {
-        name: "Music/Musicals",
-        id: "10402"
+        name: "Musicals",
+        id: "10402",
+        toggle: false
       },
       {
         name: "Romance",
-        id: "10749"
+        id: "10749",
+        toggle: false
       },
       {
         name: "Science Fiction",
-        id: "878"
+        id: "878",
+        toggle: false
       },
       {
         name: "Thriller",
-        id: "53"
+        id: "53",
+        toggle: false
       },
       {
         name: "War",
-        id: "10752"
+        id: "10752",
+        toggle: false
       },
       {
         name: "Western",
-        id: "37"
+        id: "37",
+        toggle: false
       }
       ];
+
+      $ctrl.pickGenre = function (object) {
+        object.toggle = !object.toggle;
+        if ($ctrl.searchGenre.includes(object)) {
+          $ctrl.searchGenre.splice($ctrl.searchGenre.indexOf(object), 1);
+        } else {
+          $ctrl.searchGenre.push(object);
+        }
+        console.log($ctrl.searchGenre);
+
+      }
       //$ctrl.genres is the object containing our genres and their corresponding database ID's so we can pass to service//
       $ctrl.searchTerm;
 
@@ -101,7 +130,11 @@
         //The slider object with minValue and maxValue as expressions in the partial so that the slider can be moved between those values//
       }
       $ctrl.getMovies = function (form) {
-        form.pagenum = 1; //pagenum is added to the object so that it can correspond with the database through the service. Before every new GET this number is incremented by one so the next page of the database can be displayed//
+        console.log(form);
+        form.pagenum = 1;
+        //pagenum is added to the object so that it can correspond with the database through the service. Before every new GET this number is incremented by one so the next page of the database can be displayed//
+        form.genre = $ctrl.searchGenre;
+        console.log(form);
         MovieService.clearMovieList();
         //clears movieList object so no results of prior input sticks around when user puts in new info into form
         MovieService.getMovies(form).then(function () {

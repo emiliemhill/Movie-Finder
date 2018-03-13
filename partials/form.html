@@ -2,32 +2,8 @@
   <form id="searchForm">
 
     <h3>Genre</h3>
-    <div class="md-padding selectdemoSelectHeader" ng-cloak="">
-      <div>
-        <div layout="row">
-          <md-input-container>
-            <label></label>
-
-            <md-select ng-model="$ctrl.form.genre" md-on-close="$ctrl.clearSearchTerm()" data-md-container-class="selectdemoSelectHeader"
-              multiple="">
-              <!-- after searching for genre is done and box is closed
-              the input box gets cleared  -->
-
-              <md-select-header class="demo-select-header">
-                <input ng-model="$ctrl.searchTerm" type="search" placeholder="Search for a genre..." class="demo-header-searchbox md-text">
-              </md-select-header>
-
-              <!-- binds the selected genres to $ctrl.searchTerm -->
-              <md-optgroup label="Genres">
-                <md-option ng-value="name" ng-repeat="name in $ctrl.genres |
-	            	filter:$ctrl.searchTerm">{{name.name}}</md-option>
-
-                <!-- goes through $ctrl.genres in formComponent and lists the name of the genres-->
-              </md-optgroup>
-            </md-select>
-          </md-input-container>
-        </div>
-      </div>
+    <div id="genreSelect">
+      <p ng-repeat="genre in $ctrl.genres" ng-click="$ctrl.pickGenre(genre)"  ng-class="{'selectedP' : genre.toggle }">{{ genre.name }}</p>
     </div>
     <h3>Rating</h3>
     <div class="starsDiv">
@@ -35,7 +11,7 @@
       <!-- Binds rating parameter to the form object. -->
     </div>
 
-    <h3>Run Time (min)</h3>
+    <h3>Run Time</h3>
 
 
     <div class="slider">

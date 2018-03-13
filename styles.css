@@ -13,7 +13,9 @@ body {
   background-color: #323031;
 
 }
-
+.selector-container-desktop {
+  display: none;
+}
 
 
 #watchTitle,
@@ -40,7 +42,24 @@ button:active, button:focus {
   outline: 0;
   background-color: #323031;
 }
-
+#genreSelect {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#genreSelect p {
+  margin: 10px;
+  font-size: 15px;
+  color: #AFD2CF;
+}
+#genreSelect p:active, #genreSelect p:focus {
+  border: none;
+  outline: 0;
+}
+.selectedP{
+  background-color: red;
+}
 
 i:active, i:focus {
   border: none;
@@ -66,10 +85,6 @@ i.material-icons.searchIcon {
     display: flex;
     justify-content: center;
 }
-
-
-
-
 
 .slider {
   width: 75%;
@@ -326,7 +341,18 @@ ol {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+@media only screen and (min-width : 768px) {
+  .movieTitle {
+    font-size: 30px;
+  }
+  h1.header {
+    font-size: 40px;
+  }
+  ol {
+    padding: 35px;
 
+  }
+}
 @media only screen and (min-width : 1024px){
   #bottomNav {
     display: none;
@@ -374,10 +400,25 @@ ol {
 
   .poster {
     width: 35%;
+    margin-left: 25px;
+
   }
 
   .movieTitle {
-display: inline-block;
-vertical-align: top;
+    display: none;
+  }
+  .selector-container {
+    display: none;
+  }
+  .selector-container-desktop {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 50px;
+  }
+  #desktopSelectors {
+    display: flex;
+    justify-content: center;
+    
   }
 }
