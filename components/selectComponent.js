@@ -21,7 +21,15 @@
         //This function sets the movie object in the list service to be displayed later in the list component (watch later). It also calls the nextMovie function described below.
       }
 
-      $ctrl.nextMovie = function () {
+      $ctrl.nextMovie = function ($) {
+        var el = document.getElementById("posterSwipe");
+        el.classList.add("animated","bounceOutLeft");
+
+        console.log(el);
+
+        // $element.on("change", function(){
+
+        // })
         MovieService.nextMovie();
         // calls the movieservice method to splice the first index(movie) being displayed
         $ctrl.movie = MovieService.getCurrentMovie();
