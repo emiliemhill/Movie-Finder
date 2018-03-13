@@ -73,7 +73,7 @@
     }
 
     function getCurrentMovie() {
-      return movieList[0];
+      return movieList;
     }
 
     function nextMovie() {

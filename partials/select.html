@@ -1,8 +1,10 @@
 <!-- This partial displays the properties from the returned API objects-->
 <div class="select fade">
-  <p class="movieTitle"> {{ $ctrl.movie.title }} </p>
-  <img id = "posterSwipe" class="border-radius poster" md-swipe-right="$ctrl.switchToWatch($ctrl.movie)" md-swipe-left="$ctrl.nextMovie()" ng-click="$ctrl.onClick()"
-    ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ $ctrl.movie.poster_path }}">
+  <div ng-class = "{'animated bounceOutLeft' : movie.swiped}" ng-repeat="movie in $ctrl.movie">
+  <p class="movieTitle"> {{ movie.title }} </p>
+  <img class="border-radius poster" md-swipe-right="$ctrl.switchToWatch($ctrl.movie)" md-swipe-left="$ctrl.nextMovie()" ng-click="$ctrl.onClick()"
+    ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ movie.poster_path }}">
+  </div>
   <div class="selector-container">
     <div ng-click="$ctrl.nextMovie()" class="selectors thumb-down">
       <i class="material-icons">thumb_down</i>
