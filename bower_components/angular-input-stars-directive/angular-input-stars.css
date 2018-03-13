@@ -34,3 +34,8 @@
 .angular-input-stars > li .active.angular-input-stars-hover {
 	text-shadow: black 0 0 3px;
 }
+@media only screen and (min-width : 768px){
+	.angular-input-stars > li {
+		font-size: 30px;
+	}	
+}

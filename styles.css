@@ -8,6 +8,9 @@ html {
 #listsearch {
 text-align: center;
 }
+.selector-container-tablet {
+  display: none;
+}
 
 body {
   background-color: #323031;
@@ -344,19 +347,61 @@ ol {
   to   { opacity: 1; }
 }
 @media only screen and (min-width : 768px) {
+  form#searchForm {
+    display: flex;
+    flex-direction: column;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  #genreSelect p {
+    font-size: 25px;
+  }
+  .selector-container-tablet {
+    display: flex;
+    flex-direction: column;
+  }
   .movieTitle {
     font-size: 30px;
   }
   h1.header {
-    font-size: 40px;
+    font-size: 60px;
   }
   ol {
     padding: 35px;
 
   }
+  h1 {
+    margin-bottom: 5px;
+  }
+  .showButtons {
+    font-size: 25px;
+  }
+  .poster {
+    width: 40%;
+    margin-top: 40px;
+
+  }
+  .movieTitle {
+    display: none;
+  }
+  .selector-container {
+    display: none;
+  }
+  #tabletSelectors {
+    display: flex;
+    justify-content: center;
+    
+  }
+  .selector-container-desktop {
+    display: none;
+  }
 }
 @media only screen and (min-width : 1024px){
   #bottomNav {
+    display: none;
+  }
+  .selector-container-tablet {
     display: none;
   }
   #searchForm {

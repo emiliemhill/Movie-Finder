@@ -14,6 +14,21 @@
       <i class="material-icons">thumb_up</i>
     </div>
   </div>
+  <div class="selector-container-tablet">
+      <p class="movieTitleTablet"> {{ $ctrl.movie.title }} </p>
+      <div id = "tabletSelectors">
+      <div ng-click="$ctrl.nextMovie()" class="selectors thumb-down">
+        <i class="material-icons">thumb_down</i>
+      </div>
+      <div ng-click="$ctrl.saveToList($ctrl.movie)" class="selectors watch-later">
+        <i class="material-icons">watch_later</i>
+      </div>
+      <div ng-click="$ctrl.switchToWatch($ctrl.movie)" class="selectors watch-now">
+        <i class="material-icons">thumb_up</i>
+      </div>
+      </div>
+      <p class="movieInfo"> {{ $ctrl.movie.overview }}</p>
+    </div>
   <div class="selector-container-desktop">
     <p class="movieTitleDesktop"> {{ $ctrl.movie.title }} </p>
     <div id = "desktopSelectors">
