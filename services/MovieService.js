@@ -67,7 +67,7 @@
         url: baseUrl
       }).then(function(response) {
         // console.log("service", response.data.results);
-        movieList = movieList.concat(response.data.results);
+        movieList = response.data.results;
        //makes the initial API call and concats the resulting objects to the empty movieList array. 
       });
     }
