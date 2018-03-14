@@ -157,10 +157,24 @@
           MovieService.setParameters(form);
           //this method does almost the same as getMovies...It is set in the service and used later to make another call to the API with the updated pagenum//
         };
+
         $element.find('input').on('keydown', function (ev) {
           ev.stopPropagation();
           //stopPropagation allows the search field to be used...The default event for md-select cancels keydown events//
         })
+
+        $ctrl.showGenres = function() {
+          angular.element( document.querySelector( '.genreSelect' ) ).toggleClass("mobile-hidden");
+        }
+
+        $ctrl.showStars = function() {
+          angular.element( document.querySelector( '.starsDiv' ) ).toggleClass("mobile-hidden");
+        }
+
+        $ctrl.showTimeSlider = function() {
+          angular.element( document.querySelector( '.slider' ) ).toggleClass("mobile-hidden");
+        }
+
       }
     }
 
