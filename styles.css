@@ -3,6 +3,9 @@ html {
   padding: 10px;
   padding-top: 5px;
   margin-bottom: 5%;
+  -moz-overflow: scroll;    /* Mozilla */
+  -webkit-overflow: scroll;
+  overflow: scroll;
 }
 
 
@@ -217,7 +220,7 @@ i.material-icons.navbuttons{
 }
 #bottomNav {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   z-index: 1;
   background-color: #323031;
@@ -429,9 +432,6 @@ ol {
   .selector-container {
     position: relative;
     top: 500px;
-  }
-  #bottomNav {
-    position: fixed;
   }
 }
 @media only screen and (min-width : 1024px){
