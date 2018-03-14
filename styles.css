@@ -58,7 +58,7 @@ body #welcomediv {
   margin:  auto;
   box-shadow: 0px -1px 18px 12px rgba(0,0,0,0.60);
   background-color: #AFD2CF;
-  opacity: 0.9
+  opacity: 0.95;
 }
 
 .loginbtn, .logininput {
@@ -68,12 +68,13 @@ body #welcomediv {
 .welcomeform {
   display: block;
   padding: 50px;
-
 }
 
 .logininput {
   text-align: center;
   margin: 5px;
+  border: none;
+  width:95%;
 }
 
 .welcomeform button {
@@ -81,6 +82,25 @@ body #welcomediv {
 margin: 0 auto;
 
 }
+
+.loginbtn {
+  font-family: "nunito";
+  color: #084C61;
+  border: 2px solid #8D8880;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  /* display: block;
+  margin: 0 auto; */
+  margin-top: 25px;
+}
+
+.loginmsg {
+  text-align: center;
+  color: #323031;
+}
+
+
 
 .selector-container-desktop {
   display: none;
