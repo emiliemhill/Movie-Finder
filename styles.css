@@ -2,7 +2,6 @@ html {
   background-color: #323031;
   padding: 10px;
   padding-top: 5px;
-  overflow: scroll;
   margin-bottom: 5%;
 }
 
@@ -218,7 +217,7 @@ i.material-icons.navbuttons{
 }
 #bottomNav {
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   z-index: 1;
   background-color: #323031;
@@ -430,6 +429,9 @@ ol {
   .selector-container {
     position: relative;
     top: 500px;
+  }
+  #bottomNav {
+    position: fixed;
   }
 }
 @media only screen and (min-width : 1024px){
