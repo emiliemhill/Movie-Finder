@@ -5,16 +5,29 @@
 
       <form class="welcomeform">
         <h4 class="loginmsg">Please login</h4>
-        <input class="logininput" ng-model="$ctrl.login.email" id="name" placeholder="Username" />
-        <input class="logininput" type="password" ng-model="$ctrl.login.password" id="email" placeholder="Password" />
+        <input class="logininput" ng-model="$ctrl.login.username" id="name" placeholder="Username" />
+
+        <input class="logininput" type="password" ng-model="$ctrl.login.password" id="password" placeholder="Password" />
+
         <button class="loginbtn" ng-click="$ctrl.checkLogin($ctrl.login)"type="submit">Sign In</button>
       </form>
       </div>
     </div>`,
     controller: function($location) {
       var $ctrl = this;
-      $ctrl.checkLogin = function () {
+      $ctrl.user = {
+        username: "GrantChirpus",
+        password: "chirpus4ever"
+      }
+
+      $ctrl.checkLogin = function (login) {
+        if ($ctrl.checkLogin.username === $ctrl.user.username && $ctrl.checkLogin.password === $ctrl.user.password) {
+          console.log("Hello")
           $location.path("/form");
+        } else {
+          alert("This account does not exist");
+        }
+
       }
 
 }
