@@ -57,6 +57,8 @@
               movie.swipedRight = false;
             });
         });
+      } else if (listLength === 0){
+        swal("Oh NO! No more MOvies ya Dumb bastard!")
       }
     }
 
