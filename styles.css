@@ -133,6 +133,7 @@ i:active, i:focus {
 .starsDiv {
   display: flex;
   justify-content: center;
+  margin-left: 0;
 }
 h3 {
   text-align: center;
