@@ -206,6 +206,7 @@ i.material-icons.navbuttons{
 .showButtons {
   font-family: "nunito";
   color: #084C61;
+  background-color: #AFD2CF;
   border: 2px solid #8D8880;
   border-radius: 35px;
   font-size: 15px;
