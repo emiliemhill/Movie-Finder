@@ -503,15 +503,7 @@ ol {
   .movieTitle {
     display: none;
   }
-  .selector-container {
 
-  }
-  /* .selector-container-desktop {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 50%;
-  } */
   #desktopSelectors {
     display: flex;
     justify-content: right;
