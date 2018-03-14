@@ -163,7 +163,7 @@ h3 {
   font-family: "federo";
   font-size: 20px;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   background-color: #323031;
 }
 .movieInfo {
@@ -226,7 +226,7 @@ i.material-icons.navbuttons{
   background-color: #323031;
 }
 .poster {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   margin-top: 10px;
   display: block;
@@ -238,7 +238,6 @@ i.material-icons.navbuttons{
 .selector-container {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
   flex-direction: row;
 }
 .selectors {
