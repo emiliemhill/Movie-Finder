@@ -1,13 +1,13 @@
 (function() {
   function MovieService($http) {
     var movieList = [];
-    //declares the empty movie object array that the API call will concat to. 
+    //declares the empty movie object array that the API call will concat to.
     var parameters;
     //declares the parameter variable to be used later
 
     return {
       getMovies: getMovies,
-      getCurrentMovie: getCurrentMovie,
+      getCurrentMovies: getCurrentMovies,
       setParameters: setParameters,
       getParameters: getParameters,
       nextMovie: nextMovie,
@@ -68,15 +68,16 @@
       }).then(function(response) {
         // console.log("service", response.data.results);
         movieList = response.data.results;
-       //makes the initial API call and concats the resulting objects to the empty movieList array. 
+       //makes the initial API call and concats the resulting objects to the empty movieList array.
       });
     }
 
-    function getCurrentMovie() {
-      return movieList;
+    function getCurrentMovies() {
+      return [movieList[0], movieList[1], movieList[2]];
     }
 
     function nextMovie() {
+      console.log(movieList);
       movieList.splice(0, 1);
     }
 

@@ -4,12 +4,15 @@
     controller: function ($timeout, MovieService, ListService, $location, DetailService) {
       var $ctrl = this;
       $ctrl.returned = MovieService.getParameters();
+
       //This saves the original search parameters so they can be called again if the listcheck conditionals are true.
+
       if (!($ctrl.returned)) {
+        console.log("default search");
         $ctrl.returned = { minLength: 60, maxLength: 180, pagenum: 1 };
         MovieService.getMovies($ctrl.returned).then(function () {
-
-          $ctrl.movies = MovieService.getCurrentMovie();
+          MovieService.setParameters($ctrl.returned);
+          $ctrl.movies = MovieService.getCurrentMovies();
           $ctrl.movies.forEach(function (movie) {
             movie.swipedLeft = false;
             movie.swipedRight = false;
@@ -17,15 +20,13 @@
 
         });
       } else {
-        MovieService.getMovies($ctrl.returned).then(function () {
-          $ctrl.movies = MovieService.getCurrentMovie();
+        console.log("specific search");
+          $ctrl.movies = MovieService.getCurrentMovies();
           $ctrl.movies.forEach(function (movie) {
             movie.swipedLeft = false;
             movie.swipedRight = false;
-        });
-
-      });
-    }
+          });
+        }
 
 
       //This returns the first index of the movie object array returned from the API call
@@ -37,24 +38,24 @@
       }
 
       $ctrl.deleteMovie = function () {
-        $ctrl.movies.splice(0, 1);
+        MovieService.nextMovie();
+        $ctrl.movies = MovieService.getCurrentMovies();
+        console.log($ctrl.movies);
       }
 
       $ctrl.nextMovie = function () {
         $ctrl.movies[0].swipedLeft = true;
         $timeout($ctrl.deleteMovie, 250);
         //Checks if movie array is below three, if it is, the pagenum property of returned(The original search params) is incremented and another call to the API is made to grab the second page of the original return.
-        if ($ctrl.movies.length < 3) {
+        var listLength = MovieService.checkListLength();
+        if (listLength < 5) {
           $ctrl.returned.pagenum++;
           MovieService.getMovies($ctrl.returned).then(function () {
-
-            var moviesToAdd = MovieService.getCurrentMovie();
-            moviesToAdd.forEach(function (movie) {
+            $ctrl.movies = MovieService.getCurrentMovies();
+            $ctrl.movies.forEach(function (movie) {
               movie.swipedLeft = false;
               movie.swipedRight = false;
-
-            })
-            $ctrl.movies = $ctrl.movies.concat(moviesToAdd);
+            });
         });
       }
     }
