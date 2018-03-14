@@ -314,6 +314,7 @@ i.material-icons.xOut {
 #searchForm {
   margin-left: 15px;
   margin-right: 15px;
+  height: 95%;
 }
 #savedlist li.ng-leave {
  transition: 0.2s ease-in-out all;
