@@ -173,8 +173,8 @@ p {
   font-size: 25px;
 }
 ol {
-  /* overflow: scroll;
-  max-height: 72%; */
+  /* overflow: scroll; */
+  /* max-height: 72%; */
   list-style-type: none;
 }
 li p,
@@ -207,7 +207,7 @@ i.material-icons.navbuttons{
   font-weight: 700;
   display: block;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 #buttons {
   display: flex;
