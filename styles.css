@@ -341,6 +341,26 @@ ol {
   -o-animation: fadein 2s; /* Opera < 12.1 */
   animation: fadein 2s;
 }
+
+.swal-button{
+  background-color: #084C61;
+  margin-right: 115px;
+  color: #fdc441;
+}
+
+.swal-text {
+  font-family: "nunito";
+  text-align: center;
+  font-weight: bold;
+}
+
+.swal-modal {
+  border-radius: 10px;
+  background-color: #AFD2CF;
+  border: solid 3px #084C61;
+
+}
+
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }

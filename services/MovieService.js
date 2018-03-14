@@ -71,7 +71,11 @@
     }
 
     function getCurrentMovies() {
+      if (movieList.length >= 3){
       return [movieList[0], movieList[1], movieList[2]];
+      } else if (movieList.length < 3){
+        swal("No movies left! Head back to search for more!")
+      } 
     }
 
     function nextMovie() {
