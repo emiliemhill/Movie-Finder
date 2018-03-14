@@ -137,6 +137,7 @@ i:active, i:focus {
 }
 h3 {
   text-align: center;
+  margin: 5px;
 }
 i.material-icons.searchIcon {
   color: #8D8880;
@@ -207,7 +208,7 @@ i.material-icons.navbuttons{
   font-weight: 700;
   display: block;
   margin: 0 auto;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 #buttons {
   display: flex;
