@@ -31,6 +31,53 @@ html {
 body {
   background-color: #323031;
 }
+
+body #welcomediv {
+  background-image: url("filmcollage.jpg");
+  background-size: cover;
+}
+
+#welcomediv {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+}
+
+#whitediv {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  margin:  auto;
+  box-shadow: 0px -1px 18px 12px rgba(0,0,0,0.60);
+  background-color: #AFD2CF;
+  opacity: 0.9
+}
+
+.loginbtn, .logininput {
+  border-radius: 5px;
+}
+
+.welcomeform {
+  display: block;
+  padding: 50px;
+
+}
+
+.logininput {
+  text-align: center;
+  margin: 5px;
+}
+
+.welcomeform button {
+  display: block;
+margin: 0 auto;
+
+}
+
 .selector-container-desktop {
   display: none;
 }
@@ -278,7 +325,7 @@ i.material-icons.xOut {
 ol {
   list-style-type: none;
 }
-.select, .form, .list, #formdiv {
+.select, .form, .list, #formdiv, #welcomediv {
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
   -ms-animation: fadein 2s; /* Internet Explorer */

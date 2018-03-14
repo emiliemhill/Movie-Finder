@@ -15,8 +15,11 @@
         .when("/watch", {
           template: "<watch-component></watch-component>"
         })
+        .when("/welcome", {
+          template: "<welcome-component></welcome-component>"
+        })
         .otherwise({
-          redirectTo: "/form"
+          redirectTo: "/welcome"
         });
     })
 })();
