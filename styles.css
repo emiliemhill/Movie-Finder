@@ -4,8 +4,13 @@ html {
   padding-top: 5px;
 }
 
+
 .movie {
   position: absolute;
+}
+#logo {
+  width: 95%;
+  margin: 10px;
 }
 
 .selector-container {
@@ -461,5 +466,10 @@ ol {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+  #logo {
+    width: 30%;
+    height: 30%;
+    margin-left: 60px;
   }
 }
