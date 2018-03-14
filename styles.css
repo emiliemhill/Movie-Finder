@@ -172,8 +172,8 @@ p {
   font-size: 25px;
 }
 ol {
-  overflow: scroll;
-  max-height: 72%;
+  /* overflow: scroll;
+  max-height: 72%; */
   list-style-type: none;
 }
 li p,
