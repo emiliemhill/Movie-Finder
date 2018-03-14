@@ -28,7 +28,6 @@
         var genreUrl = "&with_genres=";
         genre.forEach(function(each) {
           genreUrl += "%2C" + each.id;
-          console.log(genreUrl);
         });
         baseUrl += genreUrl;
 
@@ -53,7 +52,6 @@
       if (minRating) {
         var minRatingUrl = "&vote_average.gte=" + minRating;
         baseUrl += minRatingUrl;
-        console.log(baseUrl);
       }
 
       if (pageNumber) {
@@ -77,7 +75,6 @@
     }
 
     function nextMovie() {
-      console.log(movieList);
       movieList.splice(0, 1);
     }
 

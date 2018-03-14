@@ -18,6 +18,9 @@
         url: baseUrl + movieID + urlsuffix
       }).then(function(response) {
         movieDetails = response.data;
+        movieDetails.credits.crew = movieDetails.credits.crew.filter(function (person) {
+          return (person.job === "Director");
+        });
         //assigns the response of the API call the the movieDetails variable
       });
     }
