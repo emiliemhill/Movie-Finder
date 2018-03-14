@@ -8,6 +8,14 @@ html {
   position: absolute;
 }
 
+.selector-container {
+  position: relative;
+  top: 60vh;
+}
+
+.info-container {
+  display: none;
+}
 
 #listsearch {
   text-align: center;
@@ -336,9 +344,7 @@ ol {
   .movieTitleTablet {
     font-size: 35px;
   }
-  .selector-container {
-    display: none;
-  }
+
   #tabletSelectors {
     display: flex;
     justify-content: center;
@@ -346,8 +352,30 @@ ol {
   .selector-container-desktop {
     display: none;
   }
+
+  .info-container {
+    display: block;
+    position: relative;
+    top: 50vh;
+  }
+
+  .info-container p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .movie {
+    width: 100%;
+  }
+
+  .selector-container {
+    position: relative;
+    top: 500px;
+  }
 }
 @media only screen and (min-width : 1024px){
+
+
   #bottomNav {
     display: none;
   }
@@ -385,28 +413,53 @@ ol {
   }
   .select {
     display: flex;
-    align-items: center;
-    margin-right: 100px;
+    flex-direction: row;
   }
-  .poster {
+  /* .poster {
     width: 35%;
     margin-left: 25px;
-  }
+  } */
   .movieTitle {
     display: none;
   }
   .selector-container {
-    display: none;
+
   }
-  .selector-container-desktop {
+  /* .selector-container-desktop {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding-left: 50px;
-  }
+    width: 50%;
+  } */
   #desktopSelectors {
     display: flex;
-    justify-content: center;
+    justify-content: right;
 
+  }
+
+  .movie-container {
+    position: relative;
+    width: 40%;
+  }
+
+  .non-movie-container {
+    width: 60%;
+  }
+
+  .info-container {
+    margin-top: 0;
+    top: 0;
+  }
+
+  .selector-container {
+    top: 0;
+    margin-top: 0;
+  }
+
+  .movie {
+    position: absolute;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

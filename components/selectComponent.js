@@ -9,66 +9,68 @@
         $ctrl.returned = { minLength: 60, maxLength: 180, pagenum: 1 };
         MovieService.getMovies($ctrl.returned).then(function () {
 
-          $ctrl.movie = MovieService.getCurrentMovie();
-          $ctrl.movie.forEach(function (movie) {
+          $ctrl.movies = MovieService.getCurrentMovie();
+          $ctrl.movies.forEach(function (movie) {
             movie.swipedLeft = false;
             movie.swipedRight = false;
           })
 
-        }).then(function () {
-          console.log($ctrl.movie)
         });
-      }
+      } else {
+        MovieService.getMovies($ctrl.returned).then(function () {
+          $ctrl.movies = MovieService.getCurrentMovie();
+          $ctrl.movies.forEach(function (movie) {
+            movie.swipedLeft = false;
+            movie.swipedRight = false;
+        });
+
+      });
+    }
 
 
       //This returns the first index of the movie object array returned from the API call
 
-      $ctrl.saveToList = function (movie) {
-        ListService.saveToList(movie);
+      $ctrl.saveToList = function () {
+        ListService.saveToList($ctrl.movies[0]);
         $ctrl.nextMovie();
         //This function sets the movie object in the list service to be displayed later in the list component (watch later). It also calls the nextMovie function described below.
       }
 
       $ctrl.deleteMovie = function () {
-        $ctrl.movie.splice(0, 1);
+        $ctrl.movies.splice(0, 1);
       }
 
       $ctrl.nextMovie = function () {
-        $ctrl.movie[0].swipedLeft = true;
+        $ctrl.movies[0].swipedLeft = true;
         $timeout($ctrl.deleteMovie, 250);
-        console.log($ctrl.movie)
-
-        // MovieService.nextMovie();
-        // calls the movieservice method to splice the first index(movie) being displayed
-        // $ctrl.movie = MovieService.getCurrentMovie();
-        // returns the spliced movie object array
-
-
-        var listCheck = $ctrl.movie.length;
-        console.log(listCheck)
-        //returns the length of the movie object array.
-        if (listCheck < 3) {
+        //Checks if movie array is below three, if it is, the pagenum property of returned(The original search params) is incremented and another call to the API is made to grab the second page of the original return.
+        if ($ctrl.movies.length < 3) {
           $ctrl.returned.pagenum++;
           MovieService.getMovies($ctrl.returned).then(function () {
 
             var moviesToAdd = MovieService.getCurrentMovie();
-
             moviesToAdd.forEach(function (movie) {
               movie.swipedLeft = false;
               movie.swipedRight = false;
 
             })
-            $ctrl.movie = $ctrl.movie.concat(moviesToAdd);
-          //Checks if movie array is below three, if it is, the pagenum property of returned(The original search params) is incremented and another call to the API is made to grab the second page of the original return.
+            $ctrl.movies = $ctrl.movies.concat(moviesToAdd);
         });
       }
     }
+
+      $ctrl.swipeRight = function () {
+        $ctrl.movies[0].swipedRight = true;
+        $timeout($ctrl.switchToWatch($ctrl.movies[0]), 500);
+      }
+
       $ctrl.switchToWatch = function (movie) {
         DetailService.getMovieDetails(movie).then(function () {
           $location.path("/watch");
           //this function uses the movie object to make a separate API call for more details to be displayed in the watch component view. It also redirects you to said component. Because we're good like that
         });
       }
+
     }
   }
 
