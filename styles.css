@@ -4,7 +4,6 @@ html {
   padding-top: 5px;
 }
 
-
 .movie {
   position: absolute;
 }
@@ -58,21 +57,23 @@ button:active, button:focus {
   outline: 0;
   background-color: #323031;
 }
-#genreSelect {
+.genreSelect {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
-#genreSelect p {
+.genreSelect p {
   margin: 10px;
   font-size: 15px;
   color: #AFD2CF;
 }
-#genreSelect p:active, #genreSelect p:focus {
+.genreSelect p:active, .genreSelect p:focus {
   border: none;
   outline: 0;
 }
+
+
 .selectedP{
   box-shadow: 2px 0px 15px 8px rgba(253, 196, 65, 0.4);
   background-color: rgba(253, 196, 65, 0.4);
@@ -87,6 +88,9 @@ i:active, i:focus {
   display: flex;
   justify-content: center;
 }
+
+
+
 h3 {
   text-align: center;
 }
@@ -310,7 +314,16 @@ ol {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
+.mobile-hidden {
+  display: none;
+}
+
 @media only screen and (min-width : 768px) {
+  .mobile-hidden {
+    display: flex;
+  }
+
   form#searchForm {
     display: flex;
     flex-direction: column;
