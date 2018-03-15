@@ -185,6 +185,25 @@ i.material-icons.searchIcon {
   width: 75%;
   margin: 0 auto;
 }
+
+rz-pointer rz-pointer-max{
+  left: 261px;
+}
+
+rz-bubble rz-limit rz-ceil{
+ visibility: hidden;
+ left: 250px;
+}
+
+rz-model-value {
+  visibility: visible;
+}
+
+rz-bubble rz-model-high {
+  visibility: visible;
+  left: 250px;
+}
+
 h3 {
   color: #fdc441;
   font-family: "federo";
