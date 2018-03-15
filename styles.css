@@ -33,12 +33,18 @@ html {
 }
 body {
   background-color: #323031;
+  /* background-image: url("filmcollage.jpg"); */
+  background-size: cover;
 }
 
 body #welcomediv {
   background-image: url("filmcollage.jpg");
   background-size: cover;
 }
+
+/* .whitebox {
+  background-color: white;
+}  */
 
 #welcomediv {
   height: 100%;
@@ -50,7 +56,7 @@ body #welcomediv {
 #whitediv {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-65%);
   width: 250px;
   height: 250px;
   border-radius: 5px;
@@ -74,6 +80,7 @@ body #welcomediv {
   margin: 5px;
   border: none;
   width:95%;
+  margin-bottom: 15px;
 }
 
 .welcomeform button {
@@ -91,7 +98,6 @@ margin: 0 auto;
   font-weight: 700;
   /* display: block;
   margin: 0 auto; */
-  margin-top: 25px;
 }
 
 .loginmsg {
@@ -178,6 +184,25 @@ i.material-icons.searchIcon {
   width: 75%;
   margin: 0 auto;
 }
+
+rz-pointer rz-pointer-max{
+  left: 261px;
+}
+
+rz-bubble rz-limit rz-ceil{
+ visibility: hidden;
+ left: 250px;
+}
+
+rz-model-value {
+  visibility: visible;
+}
+
+rz-bubble rz-model-high {
+  visibility: visible;
+  left: 250px;
+}
+
 h3 {
   color: #fdc441;
   font-family: "federo";
@@ -189,6 +214,8 @@ h3 {
   margin-top: 5px;
   margin-bottom: 15px;
   background-color: #323031;
+  display: flex;
+  justify-content: center;
 }
 .movieInfo {
   font-family: "nunito";
@@ -297,7 +324,6 @@ i.material-icons.navbuttons{
   color: #AFD2CF;
   display: flex;
   justify-content: center;
-  margin-left: 25px;
 }
 .rzslider .rz-pointer {
   background-color: #AFD2CF;
@@ -509,21 +535,38 @@ ol {
   }
   #desktopnav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
+
+/* #imgdiv, #imgdiv2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#imgdiv2 {
+
+} */
+
+
+
   .header {
     float: left;
   }
   .nav {
     float: right;
     display: block;
+    margin-top: 20px;
   }
   .navlinks {
     padding: 10px;
     text-decoration: none;
     font-family: "nunito";
     color: #AFD2CF;
-    font-size: 20px;
+    font-size: 25px;
   }
   .select {
     display: flex;
@@ -536,10 +579,11 @@ ol {
   .movieTitle {
     display: none;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> c55106c3a6e43b67f7f62b0c2651238b11be62e6
+  .desktopTitle {
+    font-family: "federo";
+    color: #AFD2CF;
+    font-size: 30px;
+  }
   #desktopSelectors {
     display: flex;
     justify-content: right;
@@ -564,6 +608,10 @@ ol {
     top: 0;
     margin-top: 0;
   }
+  .info-container p {
+   margin-top: 30px;
+   margin-bottom: 20;
+  }
 
   .movie {
     position: absolute;
@@ -572,8 +620,8 @@ ol {
     margin-right: 0;
   }
   #logo {
-    width: 30%;
-    height: 30%;
-    margin-left: 60px;
+    width: 55%;
+    height: 55%;
+    margin-left: 22px;
   }
 }

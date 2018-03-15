@@ -1,4 +1,5 @@
 <!-- This partial displays the properties from the returned API objects-->
+<div class="whitebox">
 <div class="select fade">
 
   <div class="movie-container">
@@ -13,7 +14,7 @@
   </div>
   <div class="non-movie-container">
     <div class="info-container">
-      <p> {{ $ctrl.movies[0].title }} ({{ $ctrl.movies[0].release_date.slice(0,4) }})</p>
+      <p class="desktopTitle"> {{ $ctrl.movies[0].title }} ({{ $ctrl.movies[0].release_date.slice(0,4) }})</p>
       <p> {{ $ctrl.movies[0].overview }}</p>
     </div>
 
@@ -29,6 +30,7 @@
       </div>
     </div>
   </div>
+</div>
 
   <!-- <div class="selector-container-tablet">
     <p class="movieTitleTablet"> {{ movie.title }} </p>
