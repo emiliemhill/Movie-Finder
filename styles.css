@@ -578,6 +578,11 @@ ol {
   .movieTitle {
     display: none;
   }
+  .desktopTitle {
+    font-family: "federo";
+    color: #AFD2CF;
+    font-size: 30px;
+  }
   #desktopSelectors {
     display: flex;
     justify-content: right;
@@ -601,6 +606,10 @@ ol {
   .selector-container {
     top: 0;
     margin-top: 0;
+  }
+  .info-container p {
+   margin-top: 30px;
+   margin-bottom: 20;
   }
 
   .movie {
