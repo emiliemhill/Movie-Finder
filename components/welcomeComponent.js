@@ -9,7 +9,7 @@
 
         <input class="logininput" type="password" ng-model="$ctrl.login.password" id="password" placeholder="Password" />
 
-        <button classchi="loginbtn" ng-click="$ctrl.checkLogin($ctrl.login)"type="submit">Sign In</button>
+        <button class="loginbtn" ng-click="$ctrl.checkLogin($ctrl.login)"type="submit">Sign In</button>
       </form>
       </div>
     </div>`,
