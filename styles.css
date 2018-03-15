@@ -494,6 +494,7 @@ ol {
 
 .relative {
   position: relative;
+  margin-top: 25px;
 }
 
 .titlediv {
