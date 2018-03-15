@@ -304,7 +304,6 @@ i.material-icons.navbuttons{
   color: #AFD2CF;
   display: flex;
   justify-content: center;
-  margin-left: 25px;
 }
 .rzslider .rz-pointer {
   background-color: #AFD2CF;
@@ -558,10 +557,6 @@ ol {
   .movieTitle {
     display: none;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> c55106c3a6e43b67f7f62b0c2651238b11be62e6
   #desktopSelectors {
     display: flex;
     justify-content: right;
