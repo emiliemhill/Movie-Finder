@@ -489,10 +489,10 @@ ol {
     display: flex;
   }
   #logo {
-    /* padding: none;
+    padding: none;
     border-radius: none;
     border: none;
-    background-color: transparent; */
+    background-color: transparent;
 
   }
 
@@ -643,7 +643,7 @@ ol {
   .nav {
     float: right;
     display: block;
-    margin-top: 16px;
+    margin-top: 37px;
   }
   .navlinks {
     padding: 10px;
@@ -651,6 +651,7 @@ ol {
     font-family: "nunito";
     color: #AFD2CF;
     font-size: 25px;
+    font-weight: 700;
   }
   .select {
     display: flex;
