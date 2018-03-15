@@ -14,7 +14,9 @@ html {
     color:#FDC441;
 }
 
-
+/* .movietitle {
+  text-align: center;
+} */
 
 .movie {
   position: absolute;
@@ -391,6 +393,7 @@ i.material-icons.xOut {
   transform:translateY(-50%);
   right: 0;
   z-index: 20;
+  cursor: pointer;
 }
 .selectdemoSelectHeader .demo-header-searchbox {
   border: none;
