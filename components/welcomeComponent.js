@@ -4,12 +4,12 @@
     <div id="whitediv">
 
       <form class="welcomeform">
-        <h4 class="loginmsg">Please login</h4>
+        <h4 class="loginmsg">Please Login</h4>
         <input class="logininput" ng-model="$ctrl.login.username" id="name" placeholder="Username" />
 
         <input class="logininput" type="password" ng-model="$ctrl.login.password" id="password" placeholder="Password" />
 
-        <button classchi="loginbtn" ng-click="$ctrl.checkLogin($ctrl.login)"type="submit">Sign In</button>
+        <button class="loginbtn" ng-click="$ctrl.checkLogin($ctrl.login)"type="submit">Sign In</button>
       </form>
       </div>
     </div>`,
@@ -21,11 +21,12 @@
       }
 
       $ctrl.checkLogin = function (login) {
-        var logininfo = login;
-        if (logininfo.username === $ctrl.user.username && logininfo.password === $ctrl.user.password) {
+        $ctrl.logininfo = login;
+        if ($ctrl.logininfo.username === $ctrl.user.username && $ctrl.logininfo.password === $ctrl.user.password) {
           console.log("Hello")
-          $location.path("/form");
-        } else if (logininfo.username === "" && logininfo.password === "") {
+          $location.path("/form")
+        } else if ($ctrl.logininfo.username === "" && $ctrl.logininfo.password === "") {
+          console.log("Hello");
           swal("Please enter a valid username and password");
         } else {
             swal("This username and password combination does not exist");
