@@ -57,8 +57,8 @@ body #welcomediv {
   position: relative;
   top: 50%;
   transform: translateY(-65%);
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 5px;
   margin:  auto;
   box-shadow: 0px -1px 18px 12px rgba(0,0,0,0.60);
@@ -184,6 +184,25 @@ i.material-icons.searchIcon {
   width: 75%;
   margin: 0 auto;
 }
+
+rz-pointer rz-pointer-max{
+  left: 261px;
+}
+
+rz-bubble rz-limit rz-ceil{
+ visibility: hidden;
+ left: 250px;
+}
+
+rz-model-value {
+  visibility: visible;
+}
+
+rz-bubble rz-model-high {
+  visibility: visible;
+  left: 250px;
+}
+
 h3 {
   color: #fdc441;
   font-family: "federo";
@@ -540,13 +559,14 @@ ol {
   .nav {
     float: right;
     display: block;
+    margin-top: 20px;
   }
   .navlinks {
     padding: 10px;
     text-decoration: none;
     font-family: "nunito";
     color: #AFD2CF;
-    font-size: 20px;
+    font-size: 25px;
   }
   .select {
     display: flex;
@@ -558,6 +578,11 @@ ol {
   } */
   .movieTitle {
     display: none;
+  }
+  .desktopTitle {
+    font-family: "federo";
+    color: #AFD2CF;
+    font-size: 30px;
   }
   #desktopSelectors {
     display: flex;
@@ -583,6 +608,10 @@ ol {
     top: 0;
     margin-top: 0;
   }
+  .info-container p {
+   margin-top: 30px;
+   margin-bottom: 20;
+  }
 
   .movie {
     position: absolute;
@@ -592,7 +621,7 @@ ol {
   }
   #logo {
     width: 55%;
-    height: 60%;
+    height: 55%;
     margin-left: 22px;
   }
 }

@@ -21,11 +21,11 @@
       }
 
       $ctrl.checkLogin = function (login) {
-        var logininfo = login;
-        if (logininfo.username === $ctrl.user.username && logininfo.password === $ctrl.user.password) {
+        $ctrl.logininfo = login;
+        if ($ctrl.logininfo.username === $ctrl.user.username && $ctrl.logininfo.password === $ctrl.user.password) {
           console.log("Hello")
           $location.path("/form")
-        } else if (logininfo.username === "" && logininfo.password === "") {
+        } else if ($ctrl.logininfo.username === "" && $ctrl.logininfo.password === "") {
           console.log("Hello");
           swal("Please enter a valid username and password");
         } else {

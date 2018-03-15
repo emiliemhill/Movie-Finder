@@ -94,6 +94,7 @@
       }
       ];
 
+
       $ctrl.pickGenre = function (object) {
         object.toggle = !object.toggle;
         if ($ctrl.searchGenre.includes(object)) {
@@ -113,7 +114,9 @@
       };
       $ctrl.form = {
         minLength: 60,
-        maxLength: 180
+        maxLength: 180,
+        minYear: 1900,
+        maxYear: 2018
       };
       //This is the base line value for that sliders, that will change based on the rzslider high and rzslider model values//
 
@@ -130,17 +133,16 @@
       };
         //The slider object with minValue and maxValue as expressions in the partial so that the slider can be moved between those values//
 
-        // $ctrl.yearSlider = {
-        // minValue: 1920,
-        // maxValue: 2018,
-        // options: {
-        //   floor: 1920,
-        //   ceil: 2018,
-        //   step: 1,
-        //   minRange: 1920,
-        //   maxRange: 2018
-        //   }
-        // };
+        $ctrl.yearSlider = {
+        minValue: 1900,
+        maxValue: 2018,
+        options: {
+          floor: 1900,
+          ceil: 2018,
+          step: 1
+          }
+        };
+
 
       $ctrl.getMovies = function (form) {
           console.log(form);
@@ -172,7 +174,11 @@
         }
 
         $ctrl.showTimeSlider = function() {
-          angular.element( document.querySelector( '.slider' ) ).toggleClass("mobile-hidden");
+          angular.element( document.querySelector( '.timeSlider' ) ).toggleClass("mobile-hidden");
+        }
+
+        $ctrl.showYearSlider = function() {
+          angular.element( document.querySelector( '.yearSlider' ) ).toggleClass("mobile-hidden");
         }
 
       }

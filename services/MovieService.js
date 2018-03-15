@@ -22,6 +22,8 @@
       var minLength = searchObj.minLength;
       var maxLength = searchObj.maxLength;
       var minRating = searchObj.rating;
+      var minYear = searchObj.minYear;
+      var maxYear = searchObj.maxYear;
       //Variables being assigned the property values of the search object(form)
 
       if (genre) {
@@ -37,6 +39,9 @@
         var minLengthUrl = "&with_runtime.gte=" + minLength;
         baseUrl += minLengthUrl;
       }
+
+      baseUrl += "&primary_release_date.gte=" + minYear + "-01-01";
+      baseUrl += "&primary_release_date.lte=" + maxYear + "-12-31";
 
       if (maxLength >= 180) {
         var moreThan180 = "";
@@ -75,7 +80,7 @@
       return [movieList[0], movieList[1], movieList[2]];
       } else if (movieList.length < 3){
         swal("No movies left! Head back to search for more!")
-      } 
+      }
     }
 
     function nextMovie() {

@@ -9,7 +9,7 @@
 
       if (!($ctrl.returned)) {
         console.log("default search");
-        $ctrl.returned = { minLength: 60, maxLength: 180, pagenum: 1 };
+        $ctrl.returned = { minLength: 60, maxLength: 180, minYear: 1920, maxYear: 2018, pagenum: 1 };
         MovieService.getMovies($ctrl.returned).then(function () {
           MovieService.setParameters($ctrl.returned);
           $ctrl.movies = MovieService.getCurrentMovies();
