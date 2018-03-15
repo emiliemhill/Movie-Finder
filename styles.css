@@ -196,6 +196,8 @@ h3 {
   margin-top: 5px;
   margin-bottom: 15px;
   background-color: #323031;
+  display: flex;
+  justify-content: center;
 }
 .movieInfo {
   font-family: "nunito";
@@ -515,6 +517,7 @@ ol {
   }
   #desktopnav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -589,8 +592,8 @@ ol {
     margin-right: 0;
   }
   #logo {
-    width: 30%;
-    height: 30%;
-    margin-left: 60px;
+    width: 55%;
+    height: 60%;
+    margin-left: 22px;
   }
 }
