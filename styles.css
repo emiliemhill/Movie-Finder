@@ -127,7 +127,8 @@ margin: 0 auto;
 }
 a {
   font-family: "nunito";
-  color: #8d8880;
+  color: #fdc441;
+  font-size: 20px;
 }
 a:visited {
   text-decoration: none;
