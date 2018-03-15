@@ -9,7 +9,7 @@
 
         <input class="logininput" type="password" ng-model="$ctrl.login.password" id="password" placeholder="Password" />
 
-        <button class="loginbtn" ng-click="$ctrl.checkLogin($ctrl.login)"type="submit">Sign In</button>
+        <button classchi="loginbtn" ng-click="$ctrl.checkLogin($ctrl.login)"type="submit">Sign In</button>
       </form>
       </div>
     </div>`,
@@ -21,11 +21,14 @@
       }
 
       $ctrl.checkLogin = function (login) {
-        if ($ctrl.checkLogin.username === $ctrl.user.username && $ctrl.checkLogin.password === $ctrl.user.password) {
+        var logininfo = login;
+        if (logininfo.username === $ctrl.user.username && logininfo.password === $ctrl.user.password) {
           console.log("Hello")
           $location.path("/form");
+        } else if (logininfo.username === "" && logininfo.password === "") {
+          swal("Please enter a valid username and password");
         } else {
-          alert("This account does not exist");
+            swal("This username and password combination does not exist");
         }
 
       }
