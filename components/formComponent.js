@@ -166,19 +166,7 @@
         })
 
         $ctrl.showGenres = function() {
-          angular.element( document.querySelector( '.genreSelect' ) ).toggleClass("mobile-hidden");
-        }
-
-        $ctrl.showStars = function() {
-          angular.element( document.querySelector( '.starsDiv' ) ).toggleClass("mobile-hidden");
-        }
-
-        $ctrl.showTimeSlider = function() {
-          angular.element( document.querySelector( '.timeSlider' ) ).toggleClass("mobile-hidden");
-        }
-
-        $ctrl.showYearSlider = function() {
-          angular.element( document.querySelector( '.yearSlider' ) ).toggleClass("mobile-hidden");
+          angular.element( document.querySelector( '.genreSelect' ) ).toggleClass("mobile-hidden animated bounceInDown");
         }
 
       }
