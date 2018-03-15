@@ -195,6 +195,8 @@ h3 {
   margin-top: 5px;
   margin-bottom: 15px;
   background-color: #323031;
+  display: flex;
+  justify-content: center;
 }
 .movieInfo {
   font-family: "nunito";
@@ -303,7 +305,6 @@ i.material-icons.navbuttons{
   color: #AFD2CF;
   display: flex;
   justify-content: center;
-  margin-left: 25px;
 }
 .rzslider .rz-pointer {
   background-color: #AFD2CF;
@@ -515,6 +516,7 @@ ol {
   }
   #desktopnav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -557,10 +559,6 @@ ol {
   .movieTitle {
     display: none;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> c55106c3a6e43b67f7f62b0c2651238b11be62e6
   #desktopSelectors {
     display: flex;
     justify-content: right;
@@ -593,8 +591,8 @@ ol {
     margin-right: 0;
   }
   #logo {
-    width: 30%;
-    height: 30%;
-    margin-left: 60px;
+    width: 55%;
+    height: 60%;
+    margin-left: 22px;
   }
 }
