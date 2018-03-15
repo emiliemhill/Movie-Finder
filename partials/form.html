@@ -10,15 +10,15 @@
       <!-- Binds rating parameter to the form object. -->
     </div>
     <h3 ng-click="$ctrl.showTimeSlider()">Run Time</h3>
-    <div class="slider mobile-hidden">
+    <div class="timeSlider slider mobile-hidden">
       <rzslider min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}" rz-slider-model="$ctrl.form.minLength" rz-slider-high="$ctrl.form.maxLength"
         rz-slider-options="$ctrl.slider.options"></rzslider>
     </div>
     <!-- The adjustable sliders are bound to the controller, and the rz slider model and rz slider high are the final values -->
-    <!-- <h3>Year</h3>
-    <div class="yearSlider">
-      <rzslider min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}" rz-slider-model="" rz-slider-high="" rz-slider-options=""></rzslider>
-    </div> -->
+    <h3 ng-click="$ctrl.showYearSlider()">Year</h3>
+    <div class="yearSlider slider mobile-hidden">
+      <rzslider min="{{$ctrl.yearSlider.minValue}}" max="{{$ctrl.yearSlider.maxValue}}" rz-slider-model="$ctrl.form.minYear" rz-slider-high="$ctrl.form.maxYear" rz-slider-options="$ctrl.yearSlider.options"></rzslider>
+    </div>
     <div>
       <button type="button" class="showButtons" ng-click="$ctrl.getMovies($ctrl.form)">Show Movies</button>
     </div>
