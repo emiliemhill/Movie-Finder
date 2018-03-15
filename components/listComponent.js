@@ -1,9 +1,10 @@
 (function() {
   var listComponent = {
     templateUrl: `partials/list.html`,
-    controller: function(ListService, DetailService, $location) {
+    controller: function($timeout, ListService, DetailService, $location) {
       var $ctrl = this;
-      $ctrl.movies = ListService.displayList();
+      $ctrl.movies = ListService.displayList(); 
+
       $ctrl.deleteFromList = function(index) {
         ListService.deleteFromList(index, 1)
       }

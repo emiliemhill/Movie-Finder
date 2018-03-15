@@ -440,10 +440,20 @@ ol {
   display: none;
 }
 
+.desktop-list-poster{
+  display: none;
+}
+
+.posterwall {
+  display: none;
+}
+
 @media only screen and (min-width : 768px) {
   .mobile-hidden {
     display: flex;
   }
+
+
 
   form#searchForm {
     display: flex;
@@ -649,4 +659,52 @@ ol {
     height: 55%;
     margin-left: 22px;
   }
+
+  .posterlist {
+    display: none;
+  }
+
+  .posterwall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .listposter {
+    display: block;
+    width: 20%;
+    position: relative;
+  }
+
+  .desktop-list-poster {
+    display: block;
+    width: 100%;
+  }
+
+  .listposter p {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    color: #084C61;
+    font-weight: bold;
+    background-color: rgba(253, 196, 65, 0.85);
+    left: 1px;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .listposter i.material-icons.xOut {
+    position: absolute;
+    top: 15px;
+    font-weight: bolder;
+    color: #AFD2CF;
+    background-color: rgba(141, 136, 128, 0.5);
+  }
+
+
+
+
 }
