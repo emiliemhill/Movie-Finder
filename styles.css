@@ -559,13 +559,14 @@ ol {
   .nav {
     float: right;
     display: block;
+    margin-top: 20px;
   }
   .navlinks {
     padding: 10px;
     text-decoration: none;
     font-family: "nunito";
     color: #AFD2CF;
-    font-size: 20px;
+    font-size: 25px;
   }
   .select {
     display: flex;
