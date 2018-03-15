@@ -24,8 +24,9 @@
         var logininfo = login;
         if (logininfo.username === $ctrl.user.username && logininfo.password === $ctrl.user.password) {
           console.log("Hello")
-          $location.path("/form");
+          $location.path("/form")
         } else if (logininfo.username === "" && logininfo.password === "") {
+          console.log("Hello");
           swal("Please enter a valid username and password");
         } else {
             swal("This username and password combination does not exist");
