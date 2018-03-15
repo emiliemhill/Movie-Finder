@@ -482,7 +482,13 @@ ol {
   .mobile-hidden {
     display: flex;
   }
+  #logo {
+    /* padding: none;
+    border-radius: none;
+    border: none;
+    background-color: transparent; */
 
+  }
 
 
   form#searchForm {
