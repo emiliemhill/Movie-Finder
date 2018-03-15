@@ -328,6 +328,7 @@ i.material-icons.navbuttons{
 }
 
 .selectors {
+  border: solid 3px black;
   border-radius: 50%;
   width: 70px;
   height: 70px;
