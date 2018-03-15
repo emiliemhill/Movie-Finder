@@ -30,11 +30,12 @@ html {
   border: 5px solid #8D8880;
   background-color: rgba(50,48,49,0.8);
   /* margin: 20px; */
+  margin: 0 auto;
 }
 
 .selector-container {
   position: relative;
-  top: 56vh;
+  top: 45vh;
 }
 
 .info-container {
@@ -140,7 +141,7 @@ a:visited {
   text-decoration: none;
 }
 a:active, a:focus, .selectors:active, .selectors:focus {
-  border: none;
+  border: solid 3px black;
   outline: 0;
 }
 button:active, button:focus {
@@ -244,7 +245,7 @@ h3 {
   font-size: 20px;
   margin-top: 5px;
   margin-bottom: 15px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 }
 .movieInfo {
@@ -308,6 +309,9 @@ i.material-icons.navbuttons{
   z-index: 10;
   background-color: rgba(50,48,49,0.8);
 }
+
+
+
 .poster {
   width: 50%;
   margin: 0 auto;
@@ -322,8 +326,6 @@ i.material-icons.navbuttons{
   display: flex;
   justify-content: center;
   flex-direction: row;
-
-
 }
 .whitebox {
   padding: 21px;
@@ -332,6 +334,11 @@ i.material-icons.navbuttons{
   background-color: rgba(50,48,49,0.8);
   margin-top: 10px;
   margin: 10px;
+}
+
+.whitebox.mobile {
+  padding: 0;
+  height: 73vh;
 }
 
 .selectors {
@@ -486,18 +493,36 @@ ol {
   display: none;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+  margin-top: 25px;
+}
+
+.titlediv {
+  bottom: 10px;
+  width: 50%;
+  left: 25%;
+}
+
+.movieTitle {
+  background-color: red;
+}
+
 @media only screen and (min-width : 768px) {
   .mobile-hidden {
     display: flex;
   }
   #logo {
-    /* padding: none;
+    padding: none;
     border-radius: none;
     border: none;
-    background-color: transparent; */
+    background-color: transparent;
 
   }
-
 
   form#searchForm {
     display: flex;
@@ -562,6 +587,12 @@ ol {
     position: relative;
     top: 500px;
   }
+
+
+
+
+
+
 }
 @media only screen and (min-width : 1024px){
   html {
@@ -645,7 +676,7 @@ ol {
   .nav {
     float: right;
     display: block;
-    margin-top: 16px;
+    margin-top: 37px;
   }
   .navlinks {
     padding: 10px;
@@ -653,6 +684,7 @@ ol {
     font-family: "nunito";
     color: #AFD2CF;
     font-size: 25px;
+    font-weight: 700;
   }
   .select {
     display: flex;
@@ -680,6 +712,7 @@ ol {
   }
 
   .movie-container {
+    margin-top: 15px;
     position: relative;
     width: 40%;
   }
@@ -716,6 +749,10 @@ ol {
     width: 55%;
     height: 55%;
     margin-left: 22px;
+    padding: none;
+    border-radius: none;
+    border: none;
+    background-color: transparent;
   }
 
   .posterlist {
