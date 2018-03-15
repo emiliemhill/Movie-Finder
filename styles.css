@@ -302,6 +302,11 @@ i.material-icons.navbuttons{
   z-index: 10;
   background-color: rgba(50,48,49,0.8);
 }
+
+.navlinks{
+  border: solid black 3px;
+}
+
 .poster {
   width: 50%;
   margin: 0 auto;
