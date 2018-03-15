@@ -1,13 +1,19 @@
 <!-- This partial displays the properties from the returned API objects-->
 <div class="selectBox">
-  <div class="whitebox">
+  <div class="whitebox mobile">
     <div class="select fade">
 
       <div class="movie-container">
-        <div class="movie" ng-class="{'animated bounceOutLeft' : movie.swipedLeft, 'animated bounceOutRight' : movie.swipedRight}"
-          ng-repeat="movie in $ctrl.movies" ng-style="{'z-index' : $index * -1 }">
-          <p class="movieTitle"> {{ movie.title }} </p>
-          <img class="border-radius poster" md-swipe-right="$ctrl.swipeRight()" md-swipe-left="$ctrl.nextMovie()" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ movie.poster_path }}">
+        <div class="relative">
+        <div class="movie absolute" ng-class="{'animated bounceOutLeft' : movie.swipedLeft, 'animated bounceOutRight' : movie.swipedRight}" ng-repeat="movie in $ctrl.movies" ng-style="{'z-index' : $index * -1 }">
+          <div class="relative">
+
+            <img class="border-radius poster" md-swipe-right="$ctrl.swipeRight()" md-swipe-left="$ctrl.nextMovie()" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ movie.poster_path }}">
+            <div class="absolute titlediv">
+              <p class="movieTitle"> {{ movie.title }} </p>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
       <div class="non-movie-container">
