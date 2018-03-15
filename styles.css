@@ -1,29 +1,38 @@
 html {
-  background-color: #323031;
-  padding: 10px;
+  background-image: url("filmcollage.jpg");
+  background-size: cover;
   padding-top: 5px;
   margin-bottom: 5%;
   -moz-overflow: scroll;    /* Mozilla */
   -webkit-overflow: scroll;
   overflow: scroll;
+  display: flex;
+  justify-content: center;
 }
 
 .highlight, .highlight:hover, .highlight:active, .highlight:focus {
     color:#FDC441;
 }
 
-
 .movie {
   position: absolute;
 }
 #logo {
-  width: 95%;
-  margin: 10px;
+  width: 85%;
+  /* margin: 10px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 21px;
+  border-radius: 30px;
+  border: 5px solid #8D8880;
+  background-color: rgba(50,48,49,0.8);
+  /* margin: 20px; */
 }
 
 .selector-container {
   position: relative;
-  top: 60vh;
+  top: 56vh;
 }
 
 .info-container {
@@ -37,7 +46,7 @@ html {
   display: none;
 }
 body {
-  background-color: #323031;
+  background-color: transparent;
   /* background-image: url("filmcollage.jpg"); */
   background-size: cover;
 }
@@ -47,9 +56,6 @@ body #welcomediv {
   background-size: cover;
 }
 
-/* .whitebox {
-  background-color: white;
-}  */
 
 #welcomediv {
   height: 100%;
@@ -139,6 +145,25 @@ button:active, button:focus {
   outline: 0;
   background-color: #323031;
 }
+
+@keyframes bounceInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
 .genreSelect {
   display: flex;
   flex-direction: row;
@@ -154,8 +179,6 @@ button:active, button:focus {
   border: none;
   outline: 0;
 }
-
-
 .selectedP{
   box-shadow: 0px 0px 6px 8px rgba(253, 196, 65, 0.4);
   background-color: rgba(253, 196, 65, 0.4);
@@ -218,7 +241,6 @@ h3 {
   font-size: 20px;
   margin-top: 5px;
   margin-bottom: 15px;
-  background-color: #323031;
   display: flex;
   justify-content: center;
 }
@@ -274,13 +296,14 @@ i.material-icons.navbuttons{
 #buttons {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 #bottomNav {
   width: 100%;
   position: fixed;
   bottom: 0;
   z-index: 10;
-  background-color: #323031;
+  background-color: rgba(50,48,49,0.8);
 }
 .poster {
   width: 50%;
@@ -296,8 +319,20 @@ i.material-icons.navbuttons{
   display: flex;
   justify-content: center;
   flex-direction: row;
+
+
 }
+.whitebox {
+  padding: 21px;
+  border-radius: 30px;
+  border: 5px solid #8D8880;
+  background-color: rgba(50,48,49,0.8);
+  margin-top: 10px;
+  margin: 10px;
+}
+
 .selectors {
+  border: solid 3px black;
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -372,12 +407,7 @@ i.material-icons.xOut {
 .active {
   color: red;
 }
-#searchForm {
-  margin-left: 15px;
-  margin-right: 15px;
-  min-height: 100%;
 
-}
 #savedlist li.ng-leave {
  transition: 0.2s ease-in-out all;
  opacity: 0;
@@ -445,10 +475,20 @@ ol {
   display: none;
 }
 
+.desktop-list-poster{
+  display: none;
+}
+
+.posterwall {
+  display: none;
+}
+
 @media only screen and (min-width : 768px) {
   .mobile-hidden {
     display: flex;
   }
+
+
 
   form#searchForm {
     display: flex;
@@ -672,5 +712,52 @@ ol {
     height: 55%;
     margin-left: 22px;
   }
+
+  .posterlist {
+    display: none;
+  }
+
+  .posterwall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .listposter {
+    display: block;
+    width: 20%;
+    position: relative;
+  }
+
+  .desktop-list-poster {
+    display: block;
+    width: 100%;
+  }
+
+  .listposter p {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    color: #084C61;
+    font-weight: bold;
+    background-color: rgba(253, 196, 65, 0.85);
+    left: 1px;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .listposter i.material-icons.xOut {
+    position: absolute;
+    top: 15px;
+    font-weight: bolder;
+    color: #AFD2CF;
+    background-color: rgba(141, 136, 128, 0.5);
+  }
+
+
+
 
 }

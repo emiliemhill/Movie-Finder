@@ -4,7 +4,7 @@
     <div id="whitediv">
 
       <form class="welcomeform">
-        <h4 class="loginmsg">Please login</h4>
+        <h4 class="loginmsg">Please Login</h4>
         <input class="logininput" ng-model="$ctrl.login.username" id="name" placeholder="Username" />
 
         <input class="logininput" type="password" ng-model="$ctrl.login.password" id="password" placeholder="Password" />
