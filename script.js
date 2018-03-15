@@ -1,6 +1,6 @@
-(function(){
-  var btn = document.getElementsByTagName("i");
-btn.onclick = function() {
-  btn.classList.add("active");
-}
-})();
+// (function(){
+//   var btn = document.getElementsByClassName("highlight");
+// btn.onclick = function() {
+//   btn.classList.add("active");
+// }
+// })();

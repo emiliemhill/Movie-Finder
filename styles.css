@@ -8,6 +8,11 @@ html {
   overflow: scroll;
 }
 
+.highlight, .highlight:hover, .highlight:active, .highlight:focus {
+    color:#FDC441;
+}
+
+
 .movie {
   position: absolute;
 }

@@ -22,6 +22,9 @@
 
       $ctrl.checkLogin = function (login) {
         $ctrl.logininfo = login;
+        // $ctrl.logininfo.username = "";
+        // $ctrl.logininfo.password = "";
+        console.log($ctrl.logininfo);
         if ($ctrl.logininfo.username === $ctrl.user.username && $ctrl.logininfo.password === $ctrl.user.password) {
           console.log("Hello")
           $location.path("/form")
