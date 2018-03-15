@@ -715,6 +715,10 @@ ol {
     width: 55%;
     height: 55%;
     margin-left: 22px;
+    padding: none;
+    border-radius: none;
+    border: none;
+    background-color: transparent;
   }
 
   .posterlist {
