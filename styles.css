@@ -131,7 +131,8 @@ margin: 0 auto;
 }
 a {
   font-family: "nunito";
-  color: #8d8880;
+  color: #fdc441;
+  font-size: 20px;
 }
 a:visited {
   text-decoration: none;
@@ -553,10 +554,6 @@ ol {
   .info-container p {
     margin-top: 0;
     margin-bottom: 0;
-  }
-
-  .movie {
-    width: 100%;
   }
 
   .selector-container {
