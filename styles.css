@@ -138,7 +138,7 @@ a:visited {
   text-decoration: none;
 }
 a:active, a:focus, .selectors:active, .selectors:focus {
-  border: none;
+  border: solid 3px black;
   outline: 0;
 }
 button:active, button:focus {
@@ -307,9 +307,7 @@ i.material-icons.navbuttons{
   background-color: rgba(50,48,49,0.8);
 }
 
-.navlinks{
-  border: solid black 3px;
-}
+
 
 .poster {
   width: 50%;
