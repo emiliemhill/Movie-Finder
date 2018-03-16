@@ -502,7 +502,7 @@ ol {
 
 .relative {
   position: relative;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 .titlediv {
@@ -678,6 +678,15 @@ ol {
     margin: 20px;
 
   }
+
+  .whitebox.mobile {
+    height: 50vh;
+    padding: 10px;
+  }
+
+  .selectoverview {
+    padding-right: 20px;
+  }
   #whitediv {
     padding: 40px;
     border-radius: 50px;
@@ -719,7 +728,7 @@ ol {
     margin-top: 37px;
   }
   .navlinks {
-    padding: 10px;
+    padding: 8px;
     text-decoration: none;
     font-family: "nunito";
     color: #AFD2CF;
@@ -838,8 +847,5 @@ ol {
     color: #AFD2CF;
     background-color: rgba(141, 136, 128, 0.5);
   }
-
-
-
 
 }
