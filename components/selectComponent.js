@@ -58,7 +58,7 @@
             });
         });
       } else if (listLength === 0){
-        swal("Oh NO! No more MOvies ya Dumb bastard!")
+        swal("No movies! Head back to search for more ")
       }
     }
 
