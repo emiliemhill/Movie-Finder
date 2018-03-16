@@ -19,7 +19,7 @@
           template: "<welcome-component></welcome-component>"
         })
         .otherwise({
-          redirectTo: "/welcome"
+          redirectTo: "/select"
         });
     })
 })();
