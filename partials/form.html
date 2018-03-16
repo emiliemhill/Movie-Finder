@@ -2,6 +2,7 @@
 <div class="form">
   <form id="searchForm">
     <h3 ng-click="$ctrl.showGenres()">Genre</h3>
+    <div id="dropdowndiv"><i ng-click="$ctrl.showGenres()" class="material-icons dropdown">keyboard_arrow_down</i></div>
     <div class="genreSelect mobile-hidden">
       <p class="genre" ng-repeat="genre in $ctrl.genres" ng-click="$ctrl.pickGenre(genre)" ng-class="{'selectedP' : genre.toggle }" >{{ genre.name }}</p>
     </div>
