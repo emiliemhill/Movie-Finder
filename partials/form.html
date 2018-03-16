@@ -3,7 +3,7 @@
   <form id="searchForm">
     <h3 ng-click="$ctrl.showGenres()">Genre</h3>
     <div class="genreSelect mobile-hidden">
-      <p id="genre" ng-repeat="genre in $ctrl.genres" ng-click="$ctrl.pickGenre(genre)" ng-class="{'selectedP' : genre.toggle }" >{{ genre.name }}</p>
+      <p class="genre" ng-repeat="genre in $ctrl.genres" ng-click="$ctrl.pickGenre(genre)" ng-class="{'selectedP' : genre.toggle }" >{{ genre.name }}</p>
     </div>
     <h3>Rating</h3>
     <div class="starsDiv">

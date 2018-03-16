@@ -14,6 +14,10 @@ html {
     color:#FDC441;
 }
 
+.genre:hover {
+  cursor: pointer;
+}
+
 /* .movietitle {
   text-align: center;
 } */
